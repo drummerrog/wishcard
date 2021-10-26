@@ -1,28 +1,36 @@
 body {
-  font-family: "GillSansCondC";
+  font-family: "GillSansC", sans-serif;
   font-weight: 400;
   font-style: normal;
-  font-size: 20px;
+  font-size: 25px;
+  line-height: 1.2;
+  color: #000;
+  background-image: url("../image/bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .container {
-  max-width: 1140px;
+  max-width: 1440px;
 }
 
 .info {
-  width: 1140px;
+  width: 1680px;
   text-align: center;
   margin: auto;
+  margin-left: 165px;
 }
 
 .info-title {
-  font-family: "Caravan";
+  font-family: "Caravan", sans-serif;
   font-weight: 400;
   font-style: normal;
-  font-size: 1250px;
-  line-height: 0.7;
+  font-size: 215px;
+  line-height: 0.6;
+  margin: 30px 0 133px;
 }
 
 .info-description {
   text-align: left;
+  margin: 36px 0;
 }
