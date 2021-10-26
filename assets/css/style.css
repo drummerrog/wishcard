@@ -1,0 +1,28 @@
+body {
+  font-family: "GillSansCondC";
+  font-weight: 400;
+  font-style: normal;
+  font-size: 20px;
+}
+
+.container {
+  max-width: 1140px;
+}
+
+.info {
+  width: 1140px;
+  text-align: center;
+  margin: auto;
+}
+
+.info-title {
+  font-family: "Caravan";
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1250px;
+  line-height: 0.7;
+}
+
+.info-description {
+  text-align: left;
+}
