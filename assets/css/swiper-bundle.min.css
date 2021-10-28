@@ -187,8 +187,8 @@
 :root {
   --swiper-navigation-size: 44px;
 }
-.swiper-button-next,
-.swiper-button-prev {
+.swiper-button,
+.swiper-button {
   position: absolute;
   top: 50%;
   width: calc(var(--swiper-navigation-size) / 44 * 27);
@@ -203,19 +203,20 @@
 }
 .swiper-button-next.swiper-button-disabled,
 .swiper-button-prev.swiper-button-disabled {
-  opacity: 0.35;
+  /* opacity: 0.35; */
   cursor: auto;
   pointer-events: none;
 }
 .swiper-button-next:after,
 .swiper-button-prev:after {
-  font-family: swiper-icons;
+  visibility: hidden;
+  /* font-family: swiper-icons;
   font-size: var(--swiper-navigation-size);
   text-transform: none !important;
   letter-spacing: 0;
   text-transform: none;
   font-variant: initial;
-  line-height: 1;
+  line-height: 1; */
 }
 .swiper-button-prev,
 .swiper-rtl .swiper-button-next {

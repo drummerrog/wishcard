@@ -15,26 +15,19 @@ jsTriggers.forEach(function (trigger) {
   
       activeContent.classList.remove("active");
       content.classList.add("active");
-    });
   });
+});
 
 // Слайдер в галерее
 var swiper = new Swiper(".mySwiper", {
   slidesPerView: 9,
   spaceBetween: 2,
-  slidesPerGroup: 9,
-  // slidesToShow: 1,
-  // slidesToScroll: 1,
+  slidesPerGroup: 1,
   loop: true,
   loopFillGroupWithBlank: true,
+  // arrows: true,
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
   },
-});
-
-$('.lazy').slick({
-  lazyLoad: 'ondemand',
-  slidesToShow: 9,
-  slidesToScroll: 1
 });
