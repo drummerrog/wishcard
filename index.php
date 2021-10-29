@@ -12,7 +12,8 @@
     <link rel="stylesheet" href="assets/fonts/GillSans/stylesheet.css">
     <link rel="stylesheet" href="assets/fonts/Caravan/stylesheet.css">
     <!-- Скрипты -->
-    <script src="assets/js/script.js" defer></script>
+    <!-- <script src="assets/jquery.min.js" defer></script> -->
+    <!-- <script src="assets/js/script.js" defer></script> -->
 </head>
 <body>
     <header class="header">
@@ -78,6 +79,26 @@
                     </div>
                     <div class="tab-content js-tab-content active" data-tab="1">
                         
+                        <form method="post" action="/save_reviews.php">
+                            <h3>Отправить отзыв:</h3>
+                            <div class="form-row">
+                                <label>Ваше имя:</label>
+                                <input type="text" name="name" required>
+                            </div>
+                            <div class="form-row">
+                                <label>Комментарий:</label>
+                                <input type="text" name="text" required>
+                            </div>
+                            <div class="form-row">
+                                <label>Изображения:</label>
+                                <div class="img-list" id="js-file-list"></div>
+                                <input id="js-file" type="file" name="file[]" multiple accept=".jpg,.jpeg,.png,.gif">
+                            </div>
+                            <div class="form-submit">
+                                <input type="submit" name="send" value="Отправить">
+                            </div>
+                        </form>
+
                     </div>
                 </div>
                 <!-- tab-header -->
@@ -172,7 +193,8 @@
                         </div>
                         <!-- swiper -->
                     </div>
-                </div><div class="tab-header">
+                </div>
+                <div class="tab-header">
                     <div class="tab-header__item js-tab-trigger" data-tab="6">
                         <span class="tab-header__name">Хобби и Творчество,</span>
                     </div>
@@ -272,6 +294,8 @@
     <!-- /.wishcard -->
 
     <!-- Скрипты -->
+    <script src="assets/jquery.min.js"></script>
     <script src="assets/js/swiper-bundle.min.js"></script>
+    <script src="assets/js/script.js"></script>
 </body>
 </html>
