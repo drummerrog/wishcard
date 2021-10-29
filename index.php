@@ -99,6 +99,17 @@
                             </div>
                         </form>
 
+<<<<<<< HEAD:index.php
+=======
+                        <!-- <form method="post" action="/save_reviews.php">
+                            <div class="form-row">
+                                <div class="img-list" id="js-file-list"></div>
+                                <img class="form-img" src="assets/image/icon/plus.png" alt="загрузка">
+                                <input class="form-input" id="js-file" type="file" name="file[]" multiple accept=".jpg,.jpeg,.png">
+                                <input class="form-submit" type="submit" name="send" value="Отправить">
+                            </div>
+                        </form> -->
+>>>>>>> 888df74c7da27adf4dd13bd47e60f2b724aee0f1:index.html
                     </div>
                 </div>
                 <!-- tab-header -->
@@ -296,6 +307,10 @@
     <!-- Скрипты -->
     <script src="assets/jquery.min.js"></script>
     <script src="assets/js/swiper-bundle.min.js"></script>
+<<<<<<< HEAD:index.php
+=======
+    <script src="assets/js/jquery.min.js"></script>
+>>>>>>> 888df74c7da27adf4dd13bd47e60f2b724aee0f1:index.html
     <script src="assets/js/script.js"></script>
 </body>
 </html>

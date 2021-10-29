@@ -8,8 +8,9 @@ $tmp_path = $_SERVER['DOCUMENT_ROOT'] . '/uploads/tmp/';
 $path = $_SERVER['DOCUMENT_ROOT'] . '/uploads/';
  
 // Подключение к БД.
+
 $dbh = new PDO('mysql:dbname=test;host=localhost', 'root', '');
- 
+
 if (isset($_POST['send'])) {
 	$name = htmlspecialchars($_POST['name'], ENT_QUOTES);	
 	$text = htmlspecialchars($_POST['text'], ENT_QUOTES);
