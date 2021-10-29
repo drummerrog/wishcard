@@ -12,8 +12,7 @@
     <link rel="stylesheet" href="assets/fonts/GillSans/stylesheet.css">
     <link rel="stylesheet" href="assets/fonts/Caravan/stylesheet.css">
     <!-- Скрипты -->
-    <!-- <script src="assets/jquery.min.js" defer></script> -->
-    <!-- <script src="assets/js/script.js" defer></script> -->
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" defer></script> -->
 </head>
 <body>
     <header class="header">
@@ -79,37 +78,10 @@
                     </div>
                     <div class="tab-content js-tab-content active" data-tab="1">
                         
-                        <form method="post" action="/save_reviews.php">
-                            <h3>Отправить отзыв:</h3>
-                            <div class="form-row">
-                                <label>Ваше имя:</label>
-                                <input type="text" name="name" required>
-                            </div>
-                            <div class="form-row">
-                                <label>Комментарий:</label>
-                                <input type="text" name="text" required>
-                            </div>
-                            <div class="form-row">
-                                <label>Изображения:</label>
-                                <div class="img-list" id="js-file-list"></div>
-                                <input id="js-file" type="file" name="file[]" multiple accept=".jpg,.jpeg,.png,.gif">
-                            </div>
-                            <div class="form-submit">
-                                <input type="submit" name="send" value="Отправить">
-                            </div>
+                        <form id="form1" runat="server">
+                            <input type='file' id="imgInp" multiple accept=".jpg,.jpeg,.png"/>
                         </form>
 
-<<<<<<< HEAD:index.php
-=======
-                        <!-- <form method="post" action="/save_reviews.php">
-                            <div class="form-row">
-                                <div class="img-list" id="js-file-list"></div>
-                                <img class="form-img" src="assets/image/icon/plus.png" alt="загрузка">
-                                <input class="form-input" id="js-file" type="file" name="file[]" multiple accept=".jpg,.jpeg,.png">
-                                <input class="form-submit" type="submit" name="send" value="Отправить">
-                            </div>
-                        </form> -->
->>>>>>> 888df74c7da27adf4dd13bd47e60f2b724aee0f1:index.html
                     </div>
                 </div>
                 <!-- tab-header -->
@@ -305,12 +277,8 @@
     <!-- /.wishcard -->
 
     <!-- Скрипты -->
-    <script src="assets/jquery.min.js"></script>
     <script src="assets/js/swiper-bundle.min.js"></script>
-<<<<<<< HEAD:index.php
-=======
-    <script src="assets/js/jquery.min.js"></script>
->>>>>>> 888df74c7da27adf4dd13bd47e60f2b724aee0f1:index.html
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="assets/js/script.js"></script>
 </body>
 </html>

@@ -31,3 +31,21 @@ var swiper = new Swiper(".mySwiper", {
     prevEl: ".swiper-button-prev",
   },
 });
+
+// Загрузка изобраэений на страницу сайта
+function readURL(input) {
+    if (input.files && input.files[0]) {
+        var i;
+        for (i = 0; i < input.files.length; ++i) {
+          var reader = new FileReader();
+          reader.onload = function (e) {
+              $('#form1').append('<img src="'+e.target.result+'">');
+          }
+          reader.readAsDataURL(input.files[i]);
+        }
+    }
+}
+
+$("#imgInp").change(function(){
+    readURL(this);
+});
