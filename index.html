@@ -77,11 +77,20 @@
                         <span class="tab-header__name">Мои фото</span>
                     </div>
                     <div class="tab-content js-tab-content active" data-tab="1">
-                        
-                        <form id="form1" runat="server">
-                            <input type='file' id="imgInp" multiple accept=".jpg,.jpeg,.png"/>
-                        </form>
-
+                        <div class="form" id="form" runat="server">
+                            <label class="form-label">
+                                <img src="assets/image/icon/plus.png" alt="загрузка">
+                                <input class="form-input" type='file' id="imgInp" multiple accept=".jpg,.jpeg,.png"/>
+                            </label>
+                        </div>
+                        <div class="swiper mySwiper">
+                            <div class="swiper-wrapper" id="swiper">
+                                <img class="swiper-slide">
+                            </div>
+                            <div class="swiper-button swiper-button-next"></div>
+                            <div class="swiper-button swiper-button-prev"></div>
+                        </div>
+                        <!-- swiper -->
                     </div>
                 </div>
                 <!-- tab-header -->
@@ -179,7 +188,7 @@
                 </div>
                 <div class="tab-header">
                     <div class="tab-header__item js-tab-trigger" data-tab="6">
-                        <span class="tab-header__name">Хобби и Творчество,</span>
+                        <span class="tab-header__name">Хобби и Творчество</span>
                     </div>
                     <div class="tab-content js-tab-content" data-tab="6">
                         <div class="swiper mySwiper">
