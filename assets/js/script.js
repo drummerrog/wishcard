@@ -18,8 +18,22 @@ jsTriggers.forEach(function (trigger) {
   });
 });
 
-// Слайдер в галерее
+// Слайдер в остальных галереях
 var swiper = new Swiper(".mySwiper", {
+  slidesPerView: 9,
+  spaceBetween: 2,
+  slidesPerGroup: 1,
+  loop: true,
+  loopFillGroupWithBlank: true,
+  // arrows: true,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+});
+
+// Слайдер в первой галерее
+var swiper = new Swiper(".Swiper", {
   slidesPerView: 9,
   spaceBetween: 2,
   slidesPerGroup: 1,
@@ -35,7 +49,7 @@ var swiper = new Swiper(".mySwiper", {
 // swiperOptionsActive() {
 //   this.showSlider = false;
 //   this.$nextTick(() => {
-//       this.showSlider = true
+//     this.showSlider = true
 //   });
 // },
 
@@ -46,7 +60,7 @@ function readURL(input) {
     for (i = 0; i < input.files.length; ++i) {
       var reader = new FileReader();
       reader.onload = function (e) {
-        $('#swiper').append('<img class="form-image" src="'+e.target.result+'">');
+        $('.swiper-wrapper').append('<img class="swiper-slide" src="'+e.target.result+'">');
       }
       reader.readAsDataURL(input.files[i]);
     }
