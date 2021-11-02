@@ -18,28 +18,14 @@ jsTriggers.forEach(function (trigger) {
   });
 });
 
-// Слайдер в остальных галереях
+// Слайдер в галерее, где есть изображения
 var swiper = new Swiper(".mySwiper", {
   slidesPerView: 9,
   spaceBetween: 2,
   slidesPerGroup: 1,
-  loop: true,
-  loopFillGroupWithBlank: true,
-  // arrows: true,
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
+  mousewheel: {
+    invert: true,
   },
-});
-
-// Слайдер в первой галерее
-var swiper = new Swiper(".Swiper", {
-  slidesPerView: 9,
-  spaceBetween: 2,
-  slidesPerGroup: 1,
-  loop: true,
-  loopFillGroupWithBlank: true,
-  // arrows: true,
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
@@ -60,7 +46,7 @@ function readURL(input) {
     for (i = 0; i < input.files.length; ++i) {
       var reader = new FileReader();
       reader.onload = function (e) {
-        $('.swiper-wrapper').append('<img class="swiper-slide" src="'+e.target.result+'">');
+        $('.swiper-wrapper').prepend('<img class="swiper-slide" src="'+e.target.result+'">');
       }
       reader.readAsDataURL(input.files[i]);
     }
@@ -70,3 +56,32 @@ function readURL(input) {
 $("#imgInp").change(function(){
   readURL(this);
 });
+
+// Слайдер в галерее, где нет изображений
+var swiper = new Swiper(".Swiper", {
+  slidesPerView: 9,
+  spaceBetween: 2,
+  slidesPerGroup: 1,
+  mousewheel: {
+    invert: true,
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+});
+
+// Добавление слайдов в начало
+var prependNumber = 1;
+document
+  .querySelector(".prepend-slide")
+  .addEventListener("click", function (e) {
+    e.preventDefault();
+    swiper.prependSlide(
+      '<div class="swiper-slide">Slide ' + --prependNumber + "</div>"
+    );
+  });
+
+  // loop: true,
+  // loopFillGroupWithBlank: true,
+  // watchOverflow: true,

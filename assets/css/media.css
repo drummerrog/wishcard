@@ -5,10 +5,11 @@
     margin: auto;
   }
 
-  .info {
+  .info,
+  .wishcard {
     max-width: 1200px;
     width: 100%;
-    margin-left: 135px;
+    height: auto;
   }
 
   .info-title {
@@ -21,8 +22,18 @@
     margin: auto;
   }
 
-  .info-description {
+  .info-description,
+  .tabs {
     margin-right: 50px;
+  }
+
+  .tab-header__item {
+    font-size: 14px;
+  }
+
+  .swiper-slide,
+  .form-label {
+    width: 131.33px !important;
   }
 }
 
@@ -32,13 +43,25 @@
     margin: 0 20px;
   }
 
-  .info {
-    width: auto;
+  .info,
+  .wishcard {
+    width: 100%;
     margin: auto;
+    margin-left: 0;
   }
 
-  .info-description {
+  .info-description,
+  .tabs {
     margin-right: 0;
+  }
+
+  .wishcard-title {
+    font-size: 30px;
+  }
+
+  .swiper-slide,
+  .form-label {
+    width: 100px !important;
   }
 }
 

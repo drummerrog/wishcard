@@ -6,17 +6,20 @@ body {
   line-height: 1.2;
   color: #000;
   background-image: url("../image/bg.jpg");
-  background-size: cover;
+  background-size: auto;
   background-repeat: no-repeat;
 }
 
 .container {
   max-width: 1670px;
+  height: auto;
   margin: auto;
 }
 
-.info {
-  width: 1670px;
+.info,
+.wishcard {
+  max-width: 1670px;
+  height: auto;
   text-align: center;
   margin: auto;
   margin-left: 165px;
@@ -36,13 +39,6 @@ body {
   margin: 36px 0;
 }
 
-.wishcard {
-  width: 1670px;
-  text-align: center;
-  margin: auto;
-  margin-left: 165px;
-}
-
 .wishcard-title {
   font-weight: 400;
   font-style: normal;
@@ -51,8 +47,10 @@ body {
   margin: 40px 0 23px;
 }
 
+/* Табы */
 .tabs {
   max-width: 1680px;
+  height: auto;
   position: relative;
   display: flex;
   justify-content: space-between;
@@ -61,6 +59,7 @@ body {
 
 .tab-header {
   width: 186px;
+  height: auto;
   display: flex;
   flex-direction: column;
   border: 1px solid rgb(195, 195, 195);
@@ -136,6 +135,7 @@ body {
   top: 55% !important;
 }
 
+/* Форма загрузки изображений */
 .form-input[type="file"] {
   width: 183px;
   outline: 0;
