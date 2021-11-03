@@ -18,13 +18,23 @@ jsTriggers.forEach(function (trigger) {
   });
 });
 
-// Слайдер в галерее, где есть изображения
+// Слайдер в галерее, где нет изображений
 const swiper1 = new Swiper(".Swiper", {
   slidesPerView: 9,
   spaceBetween: 1,
-  // slidesPerGroup: 1,
   mousewheel: {
     invert: true,
+  },
+  breakpoints: {
+    320: {
+      slidesPerView: 1
+    },
+    375: {
+      slidesPerView: 2
+    },
+    425: {
+      slidesPerView: 2
+    }
   },
   navigation: {
     nextEl: ".swiper-button-next",
@@ -50,11 +60,10 @@ document.getElementById("imgInp").addEventListener('change',function(){
   readURL(this);
 });
 
-// Слайдер в галерее, где нет изображений
+// Слайдер в галерее, где есть изображения
 var swiper2 = new Swiper(".mySwiper", {
   slidesPerView: 9,
   spaceBetween: 1,
-  slidesPerGroup: 1,
   loop: true,
   loopFillGroupWithBlank: true,
   freeScroll: true,
