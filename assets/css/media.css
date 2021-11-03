@@ -71,37 +71,48 @@
     line-height: 1.2;
   }
 
+  .container {
+    width: auto;
+    margin: 0 13px 0 14px;
+  }
+
+  .wishcard {
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    margin: auto;
+  }
   .info-title {
     font-size: 65px;
     margin: 30px 0 60px;
   }
 
-  .form-label {
-    width: 78.3px !important;
-  }
-}
-
-@media (max-width: 766px) {
-  .wishcard {
-    width: 97%;
-    overflow: hidden;
-    white-space: nowrap;
-  }
-
   .tabs {
     display: block;
-    width: max-content;
+    width: auto;
+  }
+
+  .tab-header {
+    width: auto;
   }
 
   .tab-content {
     position: relative;
     top: 0;
-    left: -2px;
+    left: 0;
   }
 
-  .tab-content.active {
-    max-width: 700px;
-    width: max-content;
+  /* .tab-content.active { */
+  /* width: 725px; */
+  /* width: max-content; */
+  /* } */
+
+  .form-label {
+    width: 188px !important;
+  }
+
+  .swiper-button {
+    display: none;
   }
 }
 
@@ -119,6 +130,10 @@
 
   .info-text {
     width: 85%;
+  }
+
+  .form-label {
+    width: 75px !important;
   }
 }
 

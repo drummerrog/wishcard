@@ -22,7 +22,7 @@ jsTriggers.forEach(function (trigger) {
 const swiper1 = new Swiper(".Swiper", {
   slidesPerView: 9,
   spaceBetween: 1,
-  slidesPerGroup: 1,
+  // slidesPerGroup: 1,
   mousewheel: {
     invert: true,
   },
