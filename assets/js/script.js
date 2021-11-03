@@ -21,7 +21,8 @@ jsTriggers.forEach(function (trigger) {
 // Слайдер в галерее, где есть изображения
 const swiper1 = new Swiper(".Swiper", {
   slidesPerView: 9,
-  spaceBetween: 2,
+  spaceBetween: 1,
+  slidesPerGroup: 1,
   mousewheel: {
     invert: true,
   },
@@ -52,7 +53,11 @@ document.getElementById("imgInp").addEventListener('change',function(){
 // Слайдер в галерее, где нет изображений
 var swiper2 = new Swiper(".mySwiper", {
   slidesPerView: 9,
-  spaceBetween: 2,
+  spaceBetween: 1,
+  slidesPerGroup: 1,
+  loop: true,
+  loopFillGroupWithBlank: true,
+  freeScroll: true,
   mousewheel: {
     invert: true,
   },

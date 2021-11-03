@@ -31,9 +31,9 @@
     font-size: 14px;
   }
 
-  .swiper-slide,
+  /* .swiper-slide, */
   .form-label {
-    width: 131.33px !important;
+    width: 125.7px !important;
   }
 }
 
@@ -59,9 +59,9 @@
     font-size: 30px;
   }
 
-  .swiper-slide,
+  /* .swiper-slide, */
   .form-label {
-    width: 100px !important;
+    width: 105.3px !important;
   }
 }
 
@@ -74,6 +74,34 @@
   .info-title {
     font-size: 65px;
     margin: 30px 0 60px;
+  }
+
+  .form-label {
+    width: 78.3px !important;
+  }
+}
+
+@media (max-width: 766px) {
+  .wishcard {
+    width: 97%;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+
+  .tabs {
+    display: block;
+    width: max-content;
+  }
+
+  .tab-content {
+    position: relative;
+    top: 0;
+    left: -2px;
+  }
+
+  .tab-content.active {
+    max-width: 700px;
+    width: max-content;
   }
 }
 
