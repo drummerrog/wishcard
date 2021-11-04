@@ -11,13 +11,12 @@ body {
 }
 
 .container {
-  max-width: 1670px;
+  max-width: 1810px;
   height: auto;
   margin: auto;
 }
 
-.info,
-.wishcard {
+.info {
   max-width: 1670px;
   height: auto;
   text-align: center;
@@ -39,22 +38,31 @@ body {
   margin: 36px 0;
 }
 
-.wishcard-title {
+.gallery {
+  max-width: 1810px;
+  height: auto;
+  text-align: center;
+  margin: auto;
+}
+
+.gallery-title {
   font-weight: 400;
   font-style: normal;
   font-size: 35px;
   text-align: center;
-  margin: 40px 0 23px;
+  margin: 40px 0 23px 124px;
 }
 
 /* Табы */
 .tabs {
-  max-width: 1680px;
+  max-width: 1790px;
   height: auto;
   position: relative;
   display: flex;
   justify-content: space-between;
   border: 1px solid #000;
+  margin-bottom: 150px;
+  margin-left: 124px;
 }
 
 .tab-header {
@@ -162,4 +170,78 @@ body {
   align-items: center;
   justify-content: center;
   cursor: pointer;
+}
+
+/* Табы */
+.sidebar-tabs {
+  max-width: 100px;
+  height: 435px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  border: 1px solid #000;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 4px 4.785px 6.04px 0.96px rgba(143, 143, 143, 0.56);
+  margin-bottom: 200px;
+}
+
+.sidebar-tabs__title {
+  font-size: 14px;
+  line-height: 2.3;
+  border-bottom: 1px solid #000;
+  box-shadow: 4px 4.785px 6.04px 0.96px rgba(143, 143, 143, 0.56);
+  margin-bottom: 15px;
+}
+
+.sidebar-tab {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.sidebar-tab__quadrate {
+  width: 50px;
+  height: 50px;
+  box-shadow: 4px 4.785px 6.04px 0.96px rgba(143, 143, 143, 0.56);
+  border: 1px solid #000;
+  margin: 10px;
+}
+
+.white {
+  background-color: rgb(255, 255, 255);
+}
+
+.yellow {
+  background-color: rgb(248, 245, 159);
+}
+
+.blue {
+  background-color: rgb(170, 220, 248);
+}
+
+.pink {
+  background-color: rgb(246, 190, 210);
+}
+
+.purple {
+  background-color: rgb(185, 185, 239);
+}
+
+.sidebar-tab__content {
+  position: absolute;
+  width: 1680px;
+  height: 1180px;
+  top: 0;
+  left: 125px;
+  right: 0;
+  display: none;
+  border: 1px solid red;
+}
+
+.sidebar-tab__content.active {
+  display: flex;
+  border: 1px solid red;
 }

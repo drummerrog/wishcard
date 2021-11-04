@@ -5,7 +5,7 @@ jsTriggers.forEach(function (trigger) {
   trigger.addEventListener("click", function () {
     const id = this.getAttribute("data-tab"),
       content = document.querySelector(
-          '.js-tab-content[data-tab="' + id + '"]'
+        '.js-tab-content[data-tab="' + id + '"]'
         ),
         activeTrigger = document.querySelector(".js-tab-trigger.active"),
         activeContent = document.querySelector(".js-tab-content.active");
@@ -15,6 +15,20 @@ jsTriggers.forEach(function (trigger) {
   
       activeContent.classList.remove("active");
       content.classList.add("active");
+  });
+});
+
+// Табы в сайдбаре
+$(document).ready(function () {
+  $(".sidebar-tab__item").click(function () {
+    var tab_id = $(this).attr("data-tab");
+    var parent = $(this).closest(".sidebar-tabs");
+
+    parent.find(".sidebar-tab__item").removeClass("active");
+    parent.find(".sidebar-tab__content").removeClass("active");
+
+    $(this).addClass("active");
+    parent.find("[data-tab=" + tab_id + "]").addClass("active");
   });
 });
 
