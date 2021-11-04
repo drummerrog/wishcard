@@ -25,7 +25,7 @@ $(document).ready(function () {
     var parent = $(this).closest(".sidebar-tabs");
 
     parent.find(".sidebar-tab__item").removeClass("active");
-    parent.find(".sidebar-tab__content").removeClass("active");
+    parent.find(".sidebar-tabs__content").removeClass("active");
 
     $(this).addClass("active");
     parent.find("[data-tab=" + tab_id + "]").addClass("active");
