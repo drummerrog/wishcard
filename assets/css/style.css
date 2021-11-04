@@ -94,6 +94,7 @@ body {
   display: none;
   background: rgb(195, 195, 195);
   border: 1px solid #000;
+  box-shadow: 12px 20.785px 23.04px 0.96px rgba(143, 143, 143, 0.56);
 }
 
 .tab-content.active {
