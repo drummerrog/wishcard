@@ -1,9 +1,9 @@
 body {
-  font-family: "GillSansC", sans-serif;
-  font-weight: 400;
+  font-family: "GillSansLightC", sans-serif;
+  font-weight: 300;
   font-style: normal;
-  font-size: 25px;
-  line-height: 1.2;
+  font-size: 26px;
+  line-height: normal;
   color: #000;
   background-image: url("../image/bg.jpg");
   background-size: auto;
@@ -30,12 +30,12 @@ body {
   font-style: normal;
   font-size: 215px;
   line-height: 0.6;
-  margin: 30px 0 133px;
+  margin: 30px 0 140px;
 }
 
 .info-description {
   text-align: left;
-  margin: 36px 0;
+  margin: 35px 0 0;
 }
 
 .gallery {
@@ -49,7 +49,7 @@ body {
   font-style: normal;
   font-size: 35px;
   text-align: center;
-  margin: 41px 0 19px 137px;
+  margin: 44px 0 20px 137px;
 }
 
 /* Табы */
@@ -95,7 +95,7 @@ body {
   left: -1px;
   right: -1px;
   display: none;
-  background: #000;
+  /* background: #000; */
   border: 1px solid #000;
   box-shadow: 4px 4.785px 6.04px 0.96px rgba(143, 143, 143, 0.56);
 }
@@ -108,6 +108,34 @@ body {
 
 .tab-content_new {
   background: #fff;
+}
+
+/* .swiper-slide-hidden {
+  display: block;
+  width: 185px !important;
+  height: auto !important;
+  object-fit: cover;
+  border-right: 1px solid #000;
+  margin-right: 0 !important;
+} */
+
+/* .swiper-slide-hidden::before {
+  content: "";
+  display: block;
+  width: 185px !important;
+  height: 122px !important;
+  object-fit: cover;
+  border-right: 1px solid #000;
+  margin-right: 0 !important;
+} */
+
+/* .swiper-slide-hidden::after {
+  content: "";
+  display: none;
+} */
+
+.swiper-slide-duplicate {
+  margin-right: 0 !important;
 }
 
 /* Слайдер */
@@ -125,22 +153,23 @@ body {
   width: 185px !important;
   height: auto !important;
   object-fit: cover;
+  border-right: 1px solid #000;
+  margin-right: 0 !important;
+}
+
+.swiper-button {
+  background-repeat: no-repeat !important;
+  width: 12px !important;
+  height: 100px !important;
+  top: 42% !important;
 }
 
 .swiper-button-prev {
-  background-image: url("../image/icon/arrow-left.png");
-  background-repeat: no-repeat !important;
-  width: 15px !important;
-  height: 100px !important;
-  top: 55% !important;
+  left: -11px !important;
 }
 
 .swiper-button-next {
-  background-image: url("../image/icon/arrow-right.png");
-  background-repeat: no-repeat !important;
-  width: 15px !important;
-  height: 100px !important;
-  top: 55% !important;
+  right: -10px !important;
 }
 
 /* Форма загрузки изображений */
@@ -157,7 +186,7 @@ body {
 }
 
 .form-label {
-  width: 183px;
+  width: 186px;
   height: 116px;
   display: flex;
   flex-direction: column;
