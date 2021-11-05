@@ -74,33 +74,10 @@
             <h2 class="gallery-title">Галерея</h2>
             <div class="tabs">
                 <div class="tab-header">
-                    <div class="tab-header__item js-tab-trigger active" data-tab="1">
-                        <span class="tab-header__name">Мои фото</span>
-                    </div>
-                    <div class="tab-content tab-content_new js-tab-content active" data-tab="1">
-                        <div class="form" id="form" runat="server">
-                            <label class="form-label">
-                                <img src="assets/image/icon/plus.png" alt="загрузка">
-                                <input class="form-input" type='file' id="imgInp" multiple accept=".jpg,.jpeg,.png"/>
-                            </label>
-                        </div>
-                        <div class="swiper Swiper">
-                            <div class="swiper-wrapper">
-                                <!-- <div class="swiper-slide"></div> -->
-                                <!-- <img class="swiper-slide"> -->
-                            </div>
-                            <div class="swiper-button swiper-button-next"></div>
-                            <div class="swiper-button swiper-button-prev"></div>
-                        </div>
-                        <!-- swiper -->
-                    </div>
-                </div>
-                <!-- tab-header -->
-                <div class="tab-header">
-                    <div class="tab-header__item js-tab-trigger" data-tab="2">
+                    <div class="tab-header__item js-tab-trigger active" data-tab="2">
                         <span class="tab-header__name">Здоровье и Красота</span>
                     </div>
-                    <div class="tab-content js-tab-content" data-tab="2">
+                    <div class="tab-content js-tab-content active" data-tab="2">
                         <div class="swiper mySwiper">
                             <div class="swiper-wrapper">
                                 <img class="swiper-slide" src="assets/image/slider/01.jpg" alt="слайд">
@@ -279,7 +256,7 @@
                 </div>
                 <div class="tab-header">
                     <div class="tab-header__item js-tab-trigger" data-tab="9">
-                        <span class="tab-header__name spirituality">Духовность и Саморазвитие</span>
+                        <span class="tab-header__name">Духовность и развитие</span>
                     </div>
                     <div class="tab-content js-tab-content" data-tab="9">
                         <div class="swiper mySwiper">
@@ -300,6 +277,27 @@
                             <div class="swiper-button swiper-button-prev"></div>
                         </div>
                         <!-- swiper -->
+                    </div>
+                </div>
+                <div class="tab-header">
+                    <div class="tab-header__item js-tab-trigger" data-tab="1">
+                        <span class="tab-header__name">Мои фото</span>
+                    </div>
+                    <div class="tab-content tab-content_new js-tab-content" data-tab="1">
+                        <div class="swiper Swiper">
+                            <div class="swiper-wrapper">
+                            </div>
+                            <div class="swiper-button swiper-button-next"></div>
+                            <div class="swiper-button swiper-button-prev"></div>
+                        </div>
+                        <!-- swiper -->
+                        <div class="form" id="form" runat="server">
+                            <label class="form-label">
+                                <img src="assets/image/icon/plus.png" alt="загрузка">
+                                <input class="form-input" type='file' id="imgInp" multiple accept=".jpg,.jpeg,.png" />
+                            </label>
+                        </div>
+                        <!-- form -->
                     </div>
                 </div>
             </div>
