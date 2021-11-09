@@ -1,5 +1,6 @@
 @media (max-width: 1440px) {
   body {
+    font-size: 19px;
     background-position-x: 0;
     background-size: 117%;
   }
@@ -11,27 +12,31 @@
     margin: auto;
   }
 
-  .info,
+  /* .info,
   .wishcard {
-    /* max-width: 1200px; */
+    max-width: 1200px;
     width: 100%;
     height: auto;
-  }
+  } */
 
   .info-title {
-    font-size: 120px;
-    margin: 30px 0 90px;
+    font-size: 200px;
+    margin: 30px 0 140px;
   }
 
-  .info-text {
-    width: 70%;
-    margin: auto;
-  }
+  /* .info-text {
+    width: 100%;
+    font-size: 19px;
+  } */
+
+  /* .info-description {
+    font-size: 19px;
+  } */
 
   /* .info-description, */
-  .tabs {
+  /* .tabs {
     margin-right: 50px;
-  }
+  } */
 
   .tab-header__item {
     font-size: 14px;
@@ -48,22 +53,22 @@
     background-size: cover;
   }
 
-  .container {
+  /* .container {
     width: auto;
     margin: 0 20px;
-  }
+  } */
 
-  .info,
+  /* .info,
   .wishcard {
     width: 100%;
     margin: auto;
     margin-left: 0;
-  }
+  } */
 
-  .info-description,
+  /* .info-description,
   .tabs {
     margin-right: 0;
-  }
+  } */
 
   .wishcard-title {
     font-size: 30px;
@@ -82,20 +87,20 @@
     background-position: center center;
   }
 
-  .container {
+  /* .container {
     width: auto;
     margin: 0 13px 0 14px;
-  }
+  } */
 
+  .info-title {
+    font-size: 110px;
+    margin: 30px 0 60px;
+  }
   .wishcard {
-    width: 100%;
+    /* width: 100%; */
     overflow: hidden;
     white-space: nowrap;
     margin: auto;
-  }
-  .info-title {
-    font-size: 65px;
-    margin: 30px 0 60px;
   }
 
   .tabs {
@@ -129,13 +134,17 @@
   }
 
   .info-title {
-    font-size: 40px;
+    font-size: 80px;
     margin: 30px 0 30px;
   }
 
-  .info-text {
-    width: 85%;
+  .info-description {
+    margin-top: 20px;
   }
+
+  /* .info-text {
+    width: 85%;
+  } */
 
   .form-label {
     width: 75px !important;
