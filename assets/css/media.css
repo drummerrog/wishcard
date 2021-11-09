@@ -6,14 +6,14 @@
 
   .container {
     max-width: 1200px;
-    width: 100%;
+    width: 90%;
     height: auto;
     margin: auto;
   }
 
   .info,
   .wishcard {
-    max-width: 1200px;
+    /* max-width: 1200px; */
     width: 100%;
     height: auto;
   }
@@ -28,7 +28,7 @@
     margin: auto;
   }
 
-  .info-description,
+  /* .info-description, */
   .tabs {
     margin-right: 50px;
   }

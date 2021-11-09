@@ -2,8 +2,8 @@ body {
   font-family: "GillSansLightC", sans-serif;
   font-weight: 300;
   font-style: normal;
-  font-size: 26px;
-  line-height: normal;
+  font-size: 25px;
+  line-height: 1.2;
   color: #000;
   background-image: url("../image/bg.jpg");
   background-size: auto;
@@ -12,16 +12,17 @@ body {
 }
 
 .container {
-  max-width: 1800px;
+  max-width: 1740px;
+  width: 92%;
   height: auto;
   margin: auto;
 }
 
 .info {
-  max-width: 1670px;
+  /* max-width: 1670px; */
   height: auto;
   text-align: center;
-  margin-left: 165px;
+  /* margin-left: 165px; */
 }
 
 .info-title {
@@ -30,12 +31,13 @@ body {
   font-style: normal;
   font-size: 215px;
   line-height: 0.6;
-  margin: 30px 0 132px;
+  margin: 18px 0 148px 30px;
 }
 
 .info-description {
   height: auto;
-  text-align: left;
+  line-height: 1.24;
+  text-align: justify;
   margin: 35px 0 0;
 }
 
