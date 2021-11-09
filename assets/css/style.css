@@ -12,10 +12,11 @@ body {
 }
 
 .container {
-  max-width: 1740px;
-  width: 92%;
+  max-width: 1750px;
+  width: 93%;
   height: auto;
   margin: auto;
+  margin-right: 60px;
 }
 
 .info {
@@ -41,10 +42,11 @@ body {
   margin: 35px 0 0;
 }
 
+/* Галерея */
 .gallery {
-  max-width: 1875px;
+  /* max-width: 1875px; */
   height: auto;
-  text-align: center;
+  /* text-align: center; */
 }
 
 .gallery-title {
@@ -52,7 +54,7 @@ body {
   font-style: normal;
   font-size: 35px;
   text-align: center;
-  margin: 44px 0 20px 137px;
+  margin: 32px 0 11px -8px;
 }
 
 /* Табы */
@@ -62,18 +64,18 @@ body {
   display: flex;
   justify-content: space-between;
   border: 1px solid #000;
-  margin-bottom: 146px;
-  margin-left: 124px;
+  margin-bottom: 158px;
+  /* margin-left: 124px; */
 }
 
 .tab-header {
-  width: 186px;
+  width: 193px;
   height: auto;
   display: flex;
   flex-direction: column;
   border-right: 1px solid #000;
-  margin: 0;
-  padding-left: 0;
+  /* margin: 0;
+  padding-left: 0; */
 }
 
 .tab-header__item {
@@ -104,7 +106,7 @@ body {
 }
 
 .tab-content.active {
-  height: 123px;
+  height: 142px;
   display: flex;
   justify-content: space-around;
 }
@@ -153,7 +155,7 @@ body {
 
 .swiper-slide {
   display: block;
-  width: 185px !important;
+  width: 193.222px !important;
   height: auto !important;
   object-fit: cover;
   border-right: 1px solid #000;
@@ -185,12 +187,12 @@ body {
 }
 
 .form-input {
-  margin-bottom: -20px;
+  margin-bottom: -170px;
 }
 
 .form-label {
-  width: 186px;
-  height: 116px;
+  width: 194px;
+  /* height: 116px; */
   display: flex;
   flex-direction: column;
   align-items: center;
