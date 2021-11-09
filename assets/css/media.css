@@ -24,6 +24,10 @@
     margin: 30px 0 140px;
   }
 
+  .swiper-slide {
+    width: 132.2px !important;
+  }
+
   /* .info-text {
     width: 100%;
     font-size: 19px;
@@ -38,13 +42,13 @@
     margin-right: 50px;
   } */
 
-  .tab-header__item {
+  /* .tab-header__item {
     font-size: 14px;
-  }
+  } */
 
   /* .swiper-slide, */
   .form-label {
-    width: 125.7px !important;
+    width: 132.7px !important;
   }
 }
 
@@ -74,9 +78,16 @@
     font-size: 30px;
   }
 
-  /* .swiper-slide, */
+  .tab-header__item {
+    font-size: 7px;
+  }
+
+  .swiper-slide {
+    width: 99.7px !important;
+  }
+
   .form-label {
-    width: 105.3px !important;
+    width: 100.3px !important;
   }
 }
 
@@ -96,6 +107,7 @@
     font-size: 110px;
     margin: 30px 0 60px;
   }
+
   .wishcard {
     /* width: 100%; */
     overflow: hidden;
@@ -110,6 +122,12 @@
 
   .tab-header {
     width: auto;
+    border-right: none;
+  }
+
+  .tab-header__item {
+    font-size: 12px;
+    border-bottom: 1px solid #000;
   }
 
   .tab-content {
@@ -120,6 +138,10 @@
 
   .form-label {
     width: 188px !important;
+  }
+
+  .swiper-slide {
+    width: 225px !important;
   }
 
   .swiper-button {
@@ -146,7 +168,17 @@
     width: 85%;
   } */
 
+  .swiper-slide {
+    width: 191px !important;
+  }
+
   .form-label {
     width: 75px !important;
+  }
+}
+
+@media (max-width: 425px) {
+  .swiper-slide {
+    width: 51% !important;
   }
 }
