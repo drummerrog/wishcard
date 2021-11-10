@@ -33,6 +33,7 @@ body {
   font-size: 215px;
   line-height: 0.6;
   margin: 18px 0 148px 30px;
+  -webkit-margin: 18px 0 148px 30px;
 }
 
 .info-description {
@@ -158,6 +159,8 @@ body {
 }
 
 .swiper-button {
+  /* display: none;
+  display: block; */
   background-repeat: no-repeat !important;
   width: 12px !important;
   height: 100px !important;

@@ -24,9 +24,23 @@
     margin: 30px 0 140px;
   }
 
-  .swiper-slide {
-    width: 132.2px !important;
+  .tab-header__item:before {
+    content: "";
+    height: 133px;
   }
+
+  .tab-content.active {
+    height: 132.22px;
+  }
+
+  .swiper-slide {
+    width: 132.22px !important;
+  }
+
+  /* .gallery {
+    max-width: 1300px;
+    margin: auto;
+  } */
 
   /* .info-text {
     width: 100%;

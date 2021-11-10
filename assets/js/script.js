@@ -34,25 +34,28 @@ $(document).ready(function () {
 
 // Слайдер в галерее, где нет изображений
 const swiper1 = new Swiper(".Swiper", {
-  slidesPerView: 3,
+  slidesPerView: 9,
   spaceBetween: 1,
   slidesPerGroup: 1,
   watchOverflow: true,
-  freeScroll: true,
+  // freeScroll: true,
   mousewheel: {
     invert: true,
   },
-  breakpoints: {
-    320: {
-      slidesPerView: 1
-    },
-    375: {
-      slidesPerView: 2
-    },
-    425: {
-      slidesPerView: 2
-    }
-  },
+  // breakpoints: {
+  //   320: {
+  //     slidesPerView: 1
+  //   },
+  //   375: {
+  //     slidesPerView: 2
+  //   },
+  //   425: {
+  //     slidesPerView: 2
+  //   },
+  //   768: {
+  //     slidesPerView: 3
+  //   }
+  // },
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
@@ -77,28 +80,30 @@ document.getElementById("imgInp").addEventListener('change',function(){
   readURL(this);
 });
 
-// Замена пустых слайдов
-// $(document).ready(function () {
-//   $(".form-input").appendSlide(function () {
-//     var tab_id = $(this).attr("data-tab");
-//     var parent = $(this).closest(".tab-content");
-
-//     parent.find(".swiper-wrapper").removeClass("swiper-slide-hidden");
-
-//     $(this).addClass(".swiper-slide");
-//     parent.find("[data-tab=" + tab_id + "]").addClass("swiper-slide");
-//   });
-// });
-
 // Слайдер в галерее, где есть изображения
 var swiper2 = new Swiper(".mySwiper", {
   slidesPerView: 9,
   spaceBetween: 1,
   loop: true,
-  loopFillGroupWithBlank: true,
-  freeScroll: true,
+  // loopFillGroupWithBlank: true,
+  // loopedSlides: 15,
+  // freeScroll: true,
   mousewheel: {
     invert: true,
+  },
+  breakpoints: {
+    320: {
+      slidesPerView: 1
+    },
+    375: {
+      slidesPerView: 2
+    },
+    425: {
+      slidesPerView: 2
+    },
+    768: {
+      slidesPerView: 3
+    }
   },
   navigation: {
     nextEl: ".swiper-button-next",
