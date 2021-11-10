@@ -80,6 +80,7 @@ body {
 
 .tab-header__item {
   height: 37px;
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -88,6 +89,17 @@ body {
   letter-spacing: 0;
   text-transform: uppercase;
   cursor: pointer;
+}
+
+.tab-header__item:before {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 143px;
+  top: 100%;
+  right: -1px;
+  background-color: black;
+  z-index: 1;
 }
 
 .tab-header__item.active {
@@ -165,6 +177,7 @@ body {
   object-fit: cover;
   border-right: 1px solid #000;
   margin-right: 0 !important;
+  z-index: 2;
 }
 
 .swiper-button {
