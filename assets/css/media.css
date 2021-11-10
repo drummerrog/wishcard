@@ -130,14 +130,31 @@
     border-bottom: 1px solid #000;
   }
 
+  .tab-header__item:before {
+    content: none;
+  }
+
+  .tab-header__item-none {
+    border-bottom: none;
+  }
+
+  .tab-header__item-none.active {
+    border-bottom: 1px solid #000;
+  }
+
   .tab-content {
     position: relative;
     top: 0;
     left: 0;
+    border: none;
   }
 
   .form-label {
     width: 188px !important;
+  }
+
+  .swiper {
+    border-right: 1px solid #000 !important;
   }
 
   .swiper-slide {
@@ -177,8 +194,14 @@
   }
 }
 
-@media (max-width: 425px) {
+@media (max-width: 375px) {
   .swiper-slide {
     width: 51% !important;
+  }
+}
+
+@media (max-width: 320px) {
+  .swiper-slide {
+    width: 101% !important;
   }
 }
