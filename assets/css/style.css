@@ -217,12 +217,13 @@ body {
 }
 
 /* Табы сайдбара */
-.wishcard {
+/* .wishcard {
   height: auto;
   margin-left: -15px;
-}
+} */
+
 .sidebar-tabs {
-  max-width: 110px;
+  width: 110px;
   height: 490px;
   position: relative;
   display: flex;
@@ -282,10 +283,10 @@ body {
 
 .sidebar-tabs__content {
   position: absolute;
-  width: 1680px;
+  width: 1415px;
   height: 1180px;
   top: 0;
-  left: 125px;
+  left: 180px;
   right: 0;
   display: none;
   border: 1px solid red;
@@ -358,12 +359,12 @@ body {
 }
 
 .sidebar-tabs_size {
-  height: 250px;
+  width: 98px;
 }
 
 .sidebar-tab__size {
-  width: 49px;
-  height: 49px;
+  width: 59px;
+  height: 102px;
   font-family: "GillSansC", serif;
   font-size: 14px;
   font-weight: 400;
@@ -372,5 +373,5 @@ body {
   align-items: center;
   border: 1px solid #000;
   box-shadow: 4px 4.785px 6.04px 0.96px rgba(143, 143, 143, 0.56);
-  margin-top: 37px;
+  margin-top: 75px;
 }
