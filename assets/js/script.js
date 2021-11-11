@@ -42,20 +42,20 @@ const swiper1 = new Swiper(".Swiper", {
   mousewheel: {
     invert: true,
   },
-  // breakpoints: {
-  //   320: {
-  //     slidesPerView: 1
-  //   },
-  //   375: {
-  //     slidesPerView: 2
-  //   },
-  //   425: {
-  //     slidesPerView: 2
-  //   },
-  //   768: {
-  //     slidesPerView: 3
-  //   }
-  // },
+  breakpoints: {
+    320: {
+      slidesPerView: 1
+    },
+    375: {
+      slidesPerView: 2
+    },
+    425: {
+      slidesPerView: 2
+    },
+    768: {
+      slidesPerView: 3
+    }
+  },
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
@@ -91,20 +91,20 @@ var swiper2 = new Swiper(".mySwiper", {
   mousewheel: {
     invert: true,
   },
-  breakpoints: {
-    320: {
-      slidesPerView: 1
-    },
-    375: {
-      slidesPerView: 2
-    },
-    425: {
-      slidesPerView: 2
-    },
-    768: {
-      slidesPerView: 3
-    }
-  },
+  // breakpoints: {
+  //   320: {
+  //     slidesPerView: 1
+  //   },
+  //   375: {
+  //     slidesPerView: 2
+  //   },
+  //   425: {
+  //     slidesPerView: 2
+  //   },
+  //   768: {
+  //     slidesPerView: 3
+  //   }
+  // },
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
