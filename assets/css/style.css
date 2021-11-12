@@ -222,6 +222,11 @@ body {
   margin-left: -15px;
 } */
 
+.wishcard-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
 .sidebar-tabs {
   width: 110px;
   height: 490px;
@@ -366,7 +371,7 @@ body {
   width: 59px;
   height: 102px;
   font-family: "GillSansC", serif;
-  font-size: 14px;
+  font-size: 17px;
   font-weight: 400;
   display: flex;
   justify-content: center;
@@ -374,4 +379,27 @@ body {
   border: 1px solid #000;
   box-shadow: 4px 4.785px 6.04px 0.96px rgba(143, 143, 143, 0.56);
   margin-top: 75px;
+}
+
+.sidebar-button {
+  width: 98px;
+  height: 490px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 4px 4.785px 6.04px 0.96px rgba(143, 143, 143, 0.56);
+  border: 1px solid #000;
+}
+
+.download {
+  width: 60px;
+  height: 435px;
+  /* writing-mode: vertical-rl;
+  transform-origin: left;
+  transform: rotate(-90deg); */
+  background-color: rgb(255, 255, 255);
+  box-shadow: 4px 4.785px 6.04px 0.96px rgba(143, 143, 143, 0.56);
+  border: 1px solid #000;
+  /* margin-left: 51px; */
 }

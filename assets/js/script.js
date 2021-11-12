@@ -122,9 +122,21 @@ document.querySelector('.Swiper').addEventListener('click', (e)=>{
   }
 });
 
-// $(".swiper-slide").each(function () {
-//   $(this).find(".slick").slick("removeSlide");
-// });
+// Сохранение изображения в компьютер
+$('.download').on('click', function(){
+	var link = document.createElement('a');
+	link.setAttribute('href', '/download.jpeg');
+	link.setAttribute('download', 'download.jpeg');
+	link.click();
+	return false;
+});
+
+// var x=new XMLHttpRequest();
+// 	x.open("GET", "http://danml.com/wave2.jpeg", true);
+// 	x.responseType = 'blob';
+// 	x.onload=function(e){download(x.response, "dlBinAjax.jpeg", "image/jpeg" ); }
+// 	x.send();
+
 
 // Добавление слайдов в начало
 // var prependNumber = 1;
