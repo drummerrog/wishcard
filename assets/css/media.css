@@ -43,22 +43,90 @@
     width: 132.7px !important;
   }
 
-  .wishcard {
-    padding-bottom: 50px;
+  .wishcard-wrapper {
+    display: inline-flex;
+    flex-direction: column;
   }
 
-  /* .sidebar-tabs__content.active {
-    height: fit-content;
-  } */
+  .sidebar-tabs {
+    width: inherit;
+    height: auto;
+    top: 1045px;
+  }
+
+  .sidebar-tab {
+    height: 90px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .white {
+    margin-top: 10px;
+  }
+
+  .sidebar-tab__figure {
+    margin-top: 0;
+  }
+
+  .figure {
+    padding-bottom: 10px;
+  }
+
+  .oval-top {
+    margin-bottom: 20px;
+  }
+
+  .oval-bottom {
+    margin-bottom: -35px;
+  }
+
+  .sidebar-tab__size {
+    margin: 10px 0;
+    width: 102px;
+    height: 59px;
+  }
+
+  .sidebar-tabs_size {
+    top: 760px;
+    left: 707px;
+  }
+
+  .sidebar-tabs__title {
+    height: 35px;
+    line-height: 2;
+  }
+
+  .sidebar-button {
+    width: 490px;
+    height: 126px;
+    position: relative;
+    top: 760px;
+    left: 707px;
+  }
+
+  .download {
+    width: 435px;
+    height: 60px;
+    top: 1100px;
+  }
+
+  .sidebar-tabs__content {
+    left: 0;
+  }
+
+  .sidebar-tabs__content.active {
+    top: -1050px;
+  }
 
   .card {
-    width: 890px;
+    width: 1178px;
     height: fit-content;
     display: grid;
     flex-direction: column;
     -webkit-overflow-scrolling: touch;
     overflow-x: auto;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     padding: 5px 10px;
   }
 

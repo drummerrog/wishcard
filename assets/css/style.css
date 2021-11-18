@@ -122,7 +122,6 @@ body {
   left: -1px;
   right: -1px;
   display: none;
-  /* background: #000; */
   border: 1px solid #000;
   box-shadow: 4px 4.785px 6.04px 0.96px rgba(143, 143, 143, 0.56);
 }
@@ -146,8 +145,6 @@ body {
   width: 100%;
   height: 100%;
   border-right: 1px solid #000;
-  /* padding-top: 10px;
-  padding-bottom: 10px; */
 }
 
 .swiper-none {
@@ -169,20 +166,7 @@ body {
   transform: scale(1.5);
 }
 
-/* #big {
-  cursor: pointer;
-  width: 200px !important;
-}
-#big:hover {
-  width: 388px !important;
-  height: 400px !important;
-  object-fit: fill;
-  top: -130px;
-} */
-
 .swiper-button {
-  /* display: none;
-  display: block; */
   background-repeat: no-repeat !important;
   width: 12px !important;
   height: 100px !important;
@@ -221,10 +205,9 @@ body {
 }
 
 /* Табы сайдбара */
-/* .wishcard {
-  height: auto;
-  margin-left: -15px;
-} */
+.wishcard {
+  padding-bottom: 50px;
+}
 
 .wishcard-wrapper {
   display: flex;
@@ -298,7 +281,6 @@ body {
   left: 175px;
   right: 0;
   display: none;
-  /* border: 1px solid red; */
 }
 
 .sidebar-tabs__content.active {
