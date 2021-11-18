@@ -137,18 +137,6 @@ $('.download').on('click', function(){
 // 	x.onload=function(e){download(x.response, "dlBinAjax.jpeg", "image/jpeg" ); }
 // 	x.send();
 
-
-// Добавление слайдов в начало
-// var prependNumber = 1;
-// document
-//   .querySelector(".prepend-slide")
-//   .addEventListener("click", function (e) {
-//     e.preventDefault();
-//     swiper.prependSlide(
-//       '<div class="swiper-slide">Slide ' + --prependNumber + "</div>"
-//     );
-//   });
-
   // loop: true,
   // loopFillGroupWithBlank: true,
   // slidesPerGroup: 1,

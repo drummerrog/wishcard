@@ -1,3 +1,7 @@
+/* * {
+  box-sizing: border-box;
+} */
+
 body {
   font-family: "GillSansLightC", sans-serif;
   font-weight: 300;
@@ -294,12 +298,12 @@ body {
   left: 175px;
   right: 0;
   display: none;
-  border: 1px solid red;
+  /* border: 1px solid red; */
 }
 
 .sidebar-tabs__content.active {
   display: flex;
-  border: 1px solid red;
+  /* border: 1px solid red; */
 }
 
 /* Вторые табы сайдбара */
@@ -363,6 +367,7 @@ body {
   margin-right: -6px;
 }
 
+/* Третьи табы сайдбара */
 .sidebar-tabs_size {
   width: 98px;
 }
@@ -392,6 +397,7 @@ body {
   border: 1px solid #000;
 }
 
+/* Кнопка "скачать" */
 .download {
   width: 60px;
   height: 435px;
@@ -429,7 +435,7 @@ body {
 }
 
 #cw1 {
-  width: 534px;
+  width: 456px;
   display: grid;
   grid-template-columns: 106px 89px 110px 77px 74px;
   grid-template-rows: 70px 70px 53px 91px 55px;
@@ -544,6 +550,7 @@ body {
   grid-column: 5;
   margin-top: 8px;
   margin-left: -8px;
+  z-index: 0;
 }
 
 #om14 {
@@ -571,6 +578,7 @@ body {
   grid-column: 5;
   margin-top: 16px;
   margin-left: 9px;
+  z-index: 0;
 }
 
 #ct1 {
@@ -586,6 +594,7 @@ body {
   display: grid;
   grid-template-columns: 102px 120px 86px 75px 99px;
   grid-template-rows: 75px 70px 47px 93px;
+  padding-left: 80px;
 }
 
 #om17 {
@@ -1546,7 +1555,7 @@ body {
 }
 
 #cw9 {
-  width: 360px;
+  width: 490px;
   background-color: #fff;
   display: grid;
   grid-template-columns: 67px 126px 111px 97px 93px;
@@ -1559,7 +1568,6 @@ body {
   grid-row: 1;
   grid-column: 1;
   margin-top: -17px;
-  margin-left: 0px;
 }
 
 #om115 {
@@ -1603,7 +1611,6 @@ body {
   height: 79px;
   grid-row: 1;
   grid-column: 5;
-  margin-top: 0px;
   margin-left: 4px;
 }
 
