@@ -188,6 +188,14 @@
     background-size: 254%;
   }
 
+  .container {
+    width: 1200px;
+    height: auto;
+    margin: auto;
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+
   .tab-header__item {
     font-size: 7px;
   }
@@ -212,14 +220,10 @@
   }
 
   .sidebar-tabs {
-    width: 440px;
+    width: 490px;
     height: auto;
     top: 1045px;
   }
-
-  /* .sidebar-tabs--size {
-    height: auto;
-  } */
 
   .sidebar-tab {
     height: 90px;
@@ -256,7 +260,7 @@
 
   .sidebar-tabs_size {
     top: 760px;
-    left: 510px;
+    left: 710px;
   }
 
   .sidebar-tabs__title {
@@ -265,11 +269,11 @@
   }
 
   .sidebar-button {
-    width: 440px;
+    width: 490px;
     height: 126px;
     position: relative;
     top: 760px;
-    left: 510px;
+    left: 710px;
   }
 
   .download {
@@ -283,13 +287,13 @@
   }
 
   .sidebar-tabs__content.active {
-    width: max-content;
+    max-width: 1200px;
     top: -1050px;
   }
 
   .card {
-    width: 930px;
-    height: fit-content;
+    width: auto;
+    height: auto;
     display: grid;
     flex-direction: column;
     -webkit-overflow-scrolling: touch;
@@ -350,11 +354,19 @@
   }
 }
 
-@media (max-width: 1023px) and (max-width: 768px) {
+@media (max-width: 1023px) and (min-width: 768px) {
   body {
     font-size: 17px;
     line-height: 1.2;
     background-position: center center;
+  }
+
+  .container {
+    max-width: 1200px;
+    height: auto;
+    margin: auto;
+    margin-left: 50px;
+    margin-right: 50px;
   }
 
   .info-title {
@@ -362,15 +374,10 @@
     margin: 30px 0 60px;
   }
 
-  .wishcard {
-    overflow: hidden;
-    white-space: nowrap;
-    margin: auto;
-  }
-
   .tabs {
-    display: block;
     width: auto;
+    display: block;
+        margin-right: 20px;
   }
 
   .tab-header {
@@ -416,6 +423,159 @@
 
   .swiper-button {
     display: none;
+  }
+
+  .wishcard {
+    overflow: auto;
+    white-space: nowrap;
+    margin: auto;
+    margin-top: -110px;
+    margin-right: 20px;
+  }
+
+  .wishcard-wrapper {
+    width: 100%;
+    max-width: 1215px;
+    display: inline-flex;
+    flex-direction: column;
+  }
+
+  .sidebar-tabs {
+    width: 490px;
+    height: auto;
+    top: 1045px;
+    /* z-index: 0; */
+  }
+
+  .sidebar-tab {
+    height: 90px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .white {
+    margin-top: 10px;
+  }
+
+  .sidebar-tab__figure {
+    margin-top: 0;
+  }
+
+  .figure {
+    padding-bottom: 10px;
+  }
+
+  .oval-top {
+    margin-bottom: 20px;
+  }
+
+  .oval-bottom {
+    margin-bottom: -35px;
+  }
+
+  .sidebar-tab__size {
+    margin: 10px 0;
+    width: 102px;
+    height: 59px;
+  }
+
+  .sidebar-tabs_size {
+    top: 1050px;
+    left: 0;
+    /* z-index: 1; */
+  }
+
+  .sidebar-tabs__title {
+    height: 35px;
+    line-height: 2;
+  }
+
+  .sidebar-button {
+    width: 490px;
+    height: 126px;
+    position: relative;
+    top: 1050px;
+    left: 0;
+    /* z-index: 0; */
+  }
+
+  .download {
+    width: 435px;
+    height: 60px;
+    top: 1100px;
+  }
+
+  .sidebar-tabs__content {
+    left: 0;
+  }
+
+  .sidebar-tabs__content.active {
+    max-width: 696px;
+    top: -1046px;
+}
+  }
+
+  .card {
+    width: auto;
+    height: auto;
+    display: grid;
+    flex-direction: column;
+    -webkit-overflow-scrolling: touch;
+    overflow-x: auto;
+    padding: 5px 10px;
+  }
+
+  #cw1 {
+    grid-template-rows: 71px 70px 57px 91px 85px;
+  }
+
+  #cw2 {
+    grid-row: 1 !important;
+    grid-column: 2 !important;
+  }
+
+  #cw3 {
+    grid-row: 1 !important;
+    grid-column: 3 !important;
+  }
+
+  #cw4 {
+    grid-row: 2 !important;
+    grid-column: 1 !important;
+    grid-template-rows: 75px 85px 90px 64px;
+  }
+
+  #cw5 {
+    grid-row: 2 !important;
+    grid-column: 2 !important;
+    grid-template-rows: 74px 57px 45px 75px 98px;
+  }
+
+  #cw6 {
+    grid-row: 2 !important;
+    grid-column: 3 !important;
+    margin-top: -13px;
+    margin-left: -110px;
+  }
+
+  #cw7 {
+    grid-row: 3 !important;
+    grid-column: 1 !important;
+    grid-template-rows: 69px 57px 54px 70px;
+  }
+
+  #cw8 {
+    grid-row: 3 !important;
+    grid-column: 2 !important;
+    grid-template-rows: 50px 60px 94px 50px;
+  }
+
+  #cw9 {
+    grid-row: 3 !important;
+    grid-column: 3 !important;
+    grid-template-rows: 78px 40px 70px 71px;
+    margin-left: -127px;
   }
 }
 
