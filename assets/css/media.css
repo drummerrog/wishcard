@@ -111,6 +111,13 @@
     top: 1100px;
   }
 
+  .button {
+    font-size: 36px;
+    transform: rotate(90deg);
+    position: absolute;
+    top: -60px;
+  }
+
   .sidebar-tabs__content {
     left: 0;
   }
@@ -282,6 +289,13 @@
     top: 1100px;
   }
 
+  .button {
+    font-size: 36px;
+    transform: rotate(90deg);
+    position: absolute;
+    top: -60px;
+  }
+
   .sidebar-tabs__content {
     left: 0;
   }
@@ -359,6 +373,7 @@
     font-size: 17px;
     line-height: 1.2;
     background-position: center center;
+    background-size: 457%;
   }
 
   .container {
@@ -377,7 +392,7 @@
   .tabs {
     width: auto;
     display: block;
-        margin-right: 20px;
+    margin-right: 20px;
   }
 
   .tab-header {
@@ -426,7 +441,7 @@
   }
 
   .wishcard {
-    overflow: auto;
+    /* overflow: auto; */
     white-space: nowrap;
     margin: auto;
     margin-top: -110px;
@@ -506,6 +521,13 @@
     top: 1100px;
   }
 
+  .button {
+    font-size: 36px;
+    transform: rotate(90deg);
+    position: absolute;
+    top: -60px;
+  }
+
   .sidebar-tabs__content {
     left: 0;
   }
@@ -513,7 +535,6 @@
   .sidebar-tabs__content.active {
     max-width: 696px;
     top: -1046px;
-}
   }
 
   .card {
@@ -579,7 +600,7 @@
   }
 }
 
-@media (max-width: 425px) {
+@media (max-width: 767px) and (min-width: 425px) {
   body {
     font-size: 14px;
     line-height: 1.2;

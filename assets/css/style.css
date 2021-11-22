@@ -385,11 +385,15 @@ body {
   height: 435px;
   /* writing-mode: vertical-rl;
   transform-origin: left;
-  transform: rotate(-90deg); */
+  transform: rotate(90deg); */
   background-color: rgb(255, 255, 255);
   box-shadow: 4px 4.785px 6.04px 0.96px rgba(143, 143, 143, 0.56);
   border: 1px solid #000;
   /* margin-left: 51px; */
+}
+
+.button {
+  font-size: 36px;
 }
 
 /* Карта */
