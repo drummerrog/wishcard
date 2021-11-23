@@ -130,6 +130,10 @@
     top: -1050px;
   }
 
+  #ovalSmall {
+    top: -1193px;
+  }
+
   .card {
     width: 1178px;
     height: fit-content;
@@ -315,6 +319,10 @@
   .sidebar-tabs__content.active {
     max-width: 1200px;
     top: -1050px;
+  }
+
+  #ovalSmall {
+    top: -1193px;
   }
 
   .card {
@@ -554,6 +562,10 @@
     top: -1046px;
   }
 
+  #ovalSmall {
+    top: -1193px;
+  }
+
   .card {
     width: auto;
     height: auto;
@@ -789,6 +801,10 @@
     max-width: 700px;
     width: 100%;
     top: -1046px;
+  }
+
+  #ovalSmall {
+    top: -1193px;
   }
 
   .card {
@@ -1034,6 +1050,10 @@
     top: -1046px;
   }
 
+  #ovalSmall {
+    top: -1193px;
+  }
+
   .card {
     /* max-width: 700px; */
     height: auto;
@@ -1276,6 +1296,10 @@
     max-width: 700px;
     width: 100%;
     top: -1046px;
+  }
+
+  #ovalSmall {
+    top: -1193px;
   }
 
   .card {
