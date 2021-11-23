@@ -257,28 +257,20 @@ body {
   margin-top: 20px;
 }
 
-.yellow,
-.color-yellow {
-  background-color: rgb(248, 245, 159) !important;
-  z-index: 1;
+.yellow {
+  background-color: rgb(248, 245, 159);
 }
 
-.blue,
-.color-blue {
-  background-color: rgb(170, 220, 248) !important;
-  z-index: 1;
+.blue {
+  background-color: rgb(170, 220, 248);
 }
 
-.pink,
-.color-pink {
-  background-color: rgb(246, 190, 210) !important;
-  z-index: 1;
+.pink {
+  background-color: rgb(246, 190, 210);
 }
 
-.purple,
-.color-purple {
-  background-color: rgb(185, 185, 239) !important;
-  z-index: 1;
+.purple {
+  background-color: rgb(185, 185, 239);
 }
 
 .sidebar-tabs__content {
@@ -415,6 +407,29 @@ body {
   flex-wrap: wrap;
   background-color: #fff;
   padding: 5px 10px;
+}
+
+.color-yellow {
+  background-color: rgb(248, 245, 159) !important;
+  z-index: 1;
+}
+
+.blue,
+.color-blue {
+  background-color: rgb(170, 220, 248) !important;
+  z-index: 1;
+}
+
+.pink,
+.color-pink {
+  background-color: rgb(246, 190, 210) !important;
+  z-index: 1;
+}
+
+.purple,
+.color-purple {
+  background-color: rgb(185, 185, 239) !important;
+  z-index: 1;
 }
 
 .card-wrapper__text {
