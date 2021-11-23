@@ -1667,3 +1667,11 @@ body {
   margin-top: -27px;
   margin-left: 51px;
 }
+
+.card-wrapper__oval:last-child {
+  margin-bottom: 0;
+}
+
+.selected {
+  opacity: 0.6;
+}

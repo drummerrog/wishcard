@@ -62,7 +62,7 @@ const swiper1 = new Swiper(".Swiper", {
   },
 });
 
-// Загрузка изобраэений на страницу сайта
+// Загрузка изображений на страницу сайта
 function readURL(input) {
   if (input.files && input.files[0]) {
     var i;
@@ -130,6 +130,98 @@ $('.download').on('click', function(){
 	link.click();
 	return false;
 });
+
+// Drag and drop 3
+const zone1 = document.querySelector('.card-wrapper');
+const zone2 = document.querySelector('.swiper-wrapper');
+const slide = document.querySelector('#swiperSlide');
+
+zone1.ondragover = allowDrop;
+zone2.ondragover = allowDrop;
+
+function allowDrop(event) {
+  event.preventDefault();
+}
+
+slide.ondragstart = drag;
+
+function drag(event) {
+  event.dataTransfer.setData('id', event.target.id);
+}
+
+zone1.ondrop = drop;
+zone2.ondrop = drop;
+
+function drop(event) {
+  let itemId = event.dataTransfer.getData('id');
+  console.log(itemId);
+  event.target.append(document.getElementById(itemId));
+}
+
+document.addEventListener("dragstart", function( event ) {
+  // store a ref. on the dragged elem
+  dragged = event.target;
+  // make it half transparent
+  event.target.style.opacity = .5;
+}, false);
+
+document.addEventListener("dragend", function( event ) {
+  // reset the transparency
+  event.target.style.opacity = "";
+}, false);
+
+
+// Drag and drop 1
+// function allowDrop(ev) {
+//   ev.preventDefault();
+// }
+
+// function drag(ev) {
+//   ev.dataTransfer.setData("text", ev.target.id);
+// }
+
+// function drop(ev) {
+//   ev.preventDefault();
+//   var data = ev.dataTransfer.getData("text");
+//   ev.target.appendChild(document.getElementById(data));
+// }
+
+
+// Drag and drop 2
+// const tasksListElement = document.querySelector(`.swiper-wrapper`);
+// const taskElements = tasksListElement.querySelectorAll(`.swiper-slide`);
+
+// for (const task of taskElements) {
+//   task.draggable = true;
+// }
+
+// tasksListElement.addEventListener(`dragstart`, (evt) => {
+//   evt.target.classList.add(`selected`);
+// });
+
+// tasksListElement.addEventListener(`dragend`, (evt) => {
+//   evt.target.classList.remove(`selected`);
+// });
+
+// tasksListElement.addEventListener(`dragover`, (evt) => {
+//   evt.preventDefault();
+  
+//   const activeElement = tasksListElement.querySelector(`.selected`);
+//   const currentElement = evt.target;
+//   const isMoveable = activeElement !== currentElement &&
+//     currentElement.classList.contains(`card-wrapper__oval`);
+    
+//   if (!isMoveable) {
+//     return;
+//   }
+  
+//   const nextElement = (currentElement === activeElement.nextElementSibling) ?
+// 		currentElement.nextElementSibling :
+// 		currentElement;
+		
+// 	tasksListElement.insertBefore(activeElement, nextElement);
+// });
+
 
 // var x=new XMLHttpRequest();
 // 	x.open("GET", "http://danml.com/wave2.jpeg", true);
