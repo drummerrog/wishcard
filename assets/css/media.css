@@ -136,7 +136,7 @@
 
   .card {
     width: 1178px;
-    height: fit-content;
+    /* height: fit-content; */
     display: grid;
     flex-direction: column;
     -webkit-overflow-scrolling: touch;
@@ -195,6 +195,19 @@
     grid-column: 3 !important;
     grid-template-rows: 78px 40px 70px 71px;
     margin-left: -127px;
+  }
+
+  #ovalBig {
+    top: -1193px;
+  }
+
+  #cw10 {
+    width: 1400px;
+    display: grid;
+    justify-content: space-between;
+    align-content: space-between;
+    grid-template-columns: 67px 126px 111px 97px 93px 111px 97px 93px;
+    grid-template-rows: 82px 41px 76px 60px 41px 76px 60px;
   }
 }
 
@@ -385,6 +398,10 @@
     grid-column: 3 !important;
     grid-template-rows: 78px 40px 70px 71px;
     margin-left: -127px;
+  }
+
+  #ovalBig {
+    top: -1193px;
   }
 }
 
@@ -627,6 +644,10 @@
     grid-template-rows: 78px 40px 70px 71px;
     margin-left: -127px;
   }
+
+  #ovalBig {
+    top: -1193px;
+  }
 }
 
 @media (max-width: 767px) and (min-width: 425px) {
@@ -867,6 +888,10 @@
     grid-column: 3 !important;
     grid-template-rows: 78px 40px 70px 71px;
     margin-left: -127px;
+  }
+
+  #ovalBig {
+    top: -1193px;
   }
 }
 
@@ -1115,6 +1140,10 @@
     grid-template-rows: 78px 40px 70px 71px;
     margin-left: -127px;
   }
+
+  #ovalBig {
+    top: -1193px;
+  }
 }
 
 @media (max-width: 374px) and (min-width: 320px) {
@@ -1362,5 +1391,9 @@
     grid-column: 3 !important;
     grid-template-rows: 78px 40px 70px 71px;
     margin-left: -127px;
+  }
+
+  #ovalBig {
+    top: -1193px;
   }
 }

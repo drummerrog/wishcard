@@ -289,7 +289,6 @@ body {
 }
 
 #ovalSmall {
-  display: flex;
   top: -507px;
 }
 
@@ -1694,7 +1693,7 @@ body {
 } */
 
 #ovalBig {
-  top: -509px;
+  top: -507px;
 }
 
 #cw10 {
