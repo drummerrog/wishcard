@@ -37,8 +37,8 @@ const swiper1 = new Swiper(".Swiper", {
   slidesPerView: 9,
   spaceBetween: 1,
   slidesPerGroup: 1,
-  watchOverflow: true,
-  // freeScroll: true,
+  initialSlide: 0,
+  freeMode: true,
   mousewheel: {
     invert: true,
   },
@@ -81,12 +81,13 @@ document.getElementById("imgInp").addEventListener('change',function(){
 });
 
 // Слайдер в галерее, где есть изображения
-var swiper2 = new Swiper(".mySwiper", {
+const swiper2 = new Swiper(".mySwiper", {
   slidesPerView: 9,
   spaceBetween: 1,
+  slidesPerGroup: 1,
   loop: true,
+  loopedSlides: 0,
   // loopFillGroupWithBlank: true,
-  // loopedSlides: 15,
   // freeScroll: true,
   mousewheel: {
     invert: true,
