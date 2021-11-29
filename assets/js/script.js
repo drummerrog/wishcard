@@ -38,10 +38,15 @@ const swiper1 = new Swiper(".Swiper", {
   spaceBetween: 1,
   slidesPerGroup: 1,
   initialSlide: 0,
-  freeMode: true,
+  // freeMode: true,
+  allowTouchMove: false,
   mousewheel: {
     invert: true,
   },
+  // keyboard: {
+  //   enabled: true,
+  //   onlyInViewport: true,
+  // },
   breakpoints: {
     320: {
       slidesPerView: 1
@@ -60,7 +65,15 @@ const swiper1 = new Swiper(".Swiper", {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
   },
+  scrollbar: {
+    el: '.swiper-scrollbar',
+    draggable: true,
+  },
 });
+
+// swiper1.on('scrollbarDragStart', function () {
+//   console.log('From slide Drag stared.');
+// });
 
 // Загрузка изображений на страницу сайта
 function readURL(input) {
@@ -80,15 +93,30 @@ document.getElementById("imgInp").addEventListener('change',function(){
   readURL(this);
 });
 
+// Удаление слайда
+document.querySelector('.Swiper').addEventListener('click', (e)=>{
+  const target = e.target;
+  if(target.classList.contains('swiper-slide')) {
+    const children = target.parentNode.children;
+    for( let i=0; i< children.length; i++)  {
+      if(target===children[i]) swiper1.removeSlide(i); 
+    }
+  }
+});
+
 // Слайдер в галерее, где есть изображения
 const swiper2 = new Swiper(".mySwiper", {
   slidesPerView: 9,
   spaceBetween: 1,
   slidesPerGroup: 1,
+  initialSlide: null,
   loop: true,
   loopedSlides: 0,
-  // loopFillGroupWithBlank: true,
-  // freeScroll: true,
+  allowTouchMove: false,
+  // keyboard: {
+  //   enabled: true,
+  //   onlyInViewport: true,
+  // },
   mousewheel: {
     invert: true,
   },
@@ -110,66 +138,30 @@ const swiper2 = new Swiper(".mySwiper", {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
   },
+  scrollbar: {
+    el: '.swiper-scrollbar',
+    draggable: true,
+  },
 });
 
-// Удаление слайда
-document.querySelector('.Swiper').addEventListener('click', (e)=>{
-  const target = e.target;
-  if(target.classList.contains('swiper-slide')) {
-    const children = target.parentNode.children;
-    for( let i=0; i< children.length; i++)  {
-      if(target===children[i]) swiper1.removeSlide(i); 
-    }
-  }
-});
+// swiper2.on('scrollbarDragStart', function () {
+//   console.log('From slide Drag stared.');
+// });
 
 // Сохранение изображения в компьютер
 $('.download').on('click', function(){
 	var link = document.createElement('a');
-	link.setAttribute('href', '/download.jpeg');
-	link.setAttribute('download', 'download.jpeg');
+	link.setAttribute('href', '/image.jpeg');
+	link.setAttribute('download', 'image.jpeg');
 	link.click();
-	return false;
+	return true;
 });
 
-// Drag and drop 3
-const zone1 = document.querySelector('.card-wrapper');
-const zone2 = document.querySelector('.swiper-wrapper');
-const slide = document.querySelector('#swiperSlide');
-
-zone1.ondragover = allowDrop;
-zone2.ondragover = allowDrop;
-
-function allowDrop(event) {
-  event.preventDefault();
-}
-
-slide.ondragstart = drag;
-
-function drag(event) {
-  event.dataTransfer.setData('id', event.target.id);
-}
-
-zone1.ondrop = drop;
-zone2.ondrop = drop;
-
-function drop(event) {
-  let itemId = event.dataTransfer.getData('id');
-  console.log(itemId);
-  event.target.append(document.getElementById(itemId));
-}
-
-document.addEventListener("dragstart", function( event ) {
-  // store a ref. on the dragged elem
-  dragged = event.target;
-  // make it half transparent
-  event.target.style.opacity = .5;
-}, false);
-
-document.addEventListener("dragend", function( event ) {
-  // reset the transparency
-  event.target.style.opacity = "";
-}, false);
+var x=new XMLHttpRequest();
+	x.open("GET", "http://danml.com/wave2.jpeg", true);
+	x.responseType = 'blob';
+	x.onload=function(e){download(x.response, "dlBinAjax.jpeg", "image/jpeg" ); }
+	x.send();
 
 
 // Drag and drop 1
@@ -185,6 +177,134 @@ document.addEventListener("dragend", function( event ) {
 //   ev.preventDefault();
 //   var data = ev.dataTransfer.getData("text");
 //   ev.target.appendChild(document.getElementById(data));
+// }
+
+// function dragStart(event) {
+//   event.originalEvent.dataTransfer.effectAllowed = 'move';
+//   event.originalEvent.dataTransfer.setData("text/plain", event.target);
+//   console.log(event);
+//   console.log('Dragging...');
+
+//   var clone = event.target.cloneNode(true);
+//   event.target.parentNode.appendChild(clone);
+//   event.target.ghostDragger = clone;
+
+//   $(clone).addClass('dragging');
+//   return true;
+// }
+
+// function dragging(event){
+//   var clone = event.target.ghostDragger;
+// }
+
+// function stopDrag(event){
+//   var clone = event.target.ghostDragger;
+//   clone.parentNode.removeChild(clone);
+// }
+
+
+window.addEventListener('load', () => {
+  let count = posX = posY = blockPosX = blockPosY = 0;
+  let panelLeft = document.querySelector('.swiper-wrapper');
+  let panelRight = document.querySelector('.card-wrapper__oval');
+
+  panelLeft.addEventListener('mousedown', e => {
+    if(e.target.classList.contains('swiper-slide')) {
+      e.target.style.cursor = "grabbing";
+      blockPosX = e.offsetX;
+      blockPosY = e.offsetY;
+    }
+  });
+
+  panelLeft.addEventListener('mouseup', e => {
+    if(e.target.classList.contains('swiper-slide')) {
+      e.target.style.cursor = "grab";
+    }
+  });
+
+  panelLeft.addEventListener('dragstart', e => {
+    e.dataTransfer.setData('text', e.target.id);
+  });
+
+  panelLeft.addEventListener('dragend', e => {
+    e.target.style.cursor = "grab";
+  });
+
+  panelRight.addEventListener('mousedown', e => {
+    if(e.target.classList.contains('swiper-slide')) {
+      e.target.style.cursor = "grabbing";
+    }
+  });
+
+  panelRight.addEventListener('mouseup', e => {
+    if(e.target.classList.contains('swiper-slide')) {
+      e.target.style.cursor = "grab";
+    }
+  });
+
+  panelRight.addEventListener('dragstart', e => {
+    e.dataTransfer.setData('text', e.target.id);
+  });
+
+  panelRight.addEventListener('dragend', e => {
+    e.target.style.cursor = "grab";
+  });
+
+  panelRight.addEventListener('dragenter', e => {
+    e.preventDefault();
+  });
+
+  panelRight.addEventListener('dragover', e => {
+    e.preventDefault();
+    posX = e.offsetX - blockPosX;
+    posY = e.offsetY - blockPosY;
+  });
+
+  panelRight.addEventListener('drop', e => {
+    e.preventDefault();
+    let id = e.dataTransfer.getData('text');
+    let el = document.querySelector('#'+id);
+    if (el.getAttribute('data-type') == 'proto') {
+      count++;
+      let cpElem = el.cloneNode(true);
+      cpElem.setAttribute('id', id + "_" + count);
+      cpElem.setAttribute('data-type', 'elem');
+      cpElem.classList.add('pos');
+      cpElem.style.cursor = "grab";
+      e.target.appendChild(cpElem);
+    } else if (el.getAttribute('data-type') == 'elem') {
+      el.style.position = "absolute";
+      if (posX < 0) {
+        posX = 0;
+      }
+      if (posY < 0) {
+        posY = 0;
+      }
+      el.style.top = posY + "px";
+      el.style.left = posX + "px";
+    }
+  });
+});
+
+
+// var itemsListCloned = document.querySelectorAll('.swiper-slide.clone-altered');
+
+// if( itemsListCloned.length ){
+// 	[].forEach.call(itemsListCloned, function(item) {
+// 		var draggedEl = item.cloneNode();
+// 		var currentClone = null;
+
+// 		draggedEl.className += " dragged";
+
+// 		item.addEventListener('dragstart', function(e){
+// 			currentClone = this.parentElement.insertBefore(draggedEl, item);
+// 			e.dataTransfer.setDragImage(currentClone, 0, 0);
+// 		},false);
+
+// 		item.addEventListener('dragend', function(e){
+// 			currentClone.remove();
+// 		},false);
+// 	});
 // }
 
 
@@ -224,13 +344,100 @@ document.addEventListener("dragend", function( event ) {
 // });
 
 
-// var x=new XMLHttpRequest();
-// 	x.open("GET", "http://danml.com/wave2.jpeg", true);
-// 	x.responseType = 'blob';
-// 	x.onload=function(e){download(x.response, "dlBinAjax.jpeg", "image/jpeg" ); }
-// 	x.send();
+// Drag and drop 3 - вариант с мячом
+// const zone1 = document.querySelector('.card-wrapper__oval');
+// const slide = document.querySelector('#swiperSlide');
 
-  // loop: true,
-  // loopFillGroupWithBlank: true,
-  // slidesPerGroup: 1,
-  // watchOverflow: true,
+// zone1.ondragover = allowDrop;
+
+// function allowDrop(event) {
+//   event.preventDefault();
+// }
+
+// slide.ondragstart = drag;
+
+// function drag(event) {
+//   event.dataTransfer.setData('id', event.target.id);
+// }
+
+// zone1.ondrop = drop;
+
+// function drop(event) {
+//   let itemId = event.dataTransfer.getData('id');
+//   console.log(itemId);
+//   event.target.append(document.getElementById(itemId));
+// }
+
+// document.addEventListener("dragstart", function( event ) {
+  
+//   dragged = event.target;
+  
+//   event.target.style.opacity = .5;
+// }, false);
+
+// document.addEventListener("dragend", function( event ) {
+  
+//   event.target.style.opacity = "";
+// }, false);
+
+
+// Drag and drop 4
+// let currentDroppable = null;
+
+// swiperSlide.onmousedown = function(event) {
+
+//   let shiftX = event.clientX - swiperSlide.getBoundingClientRect().left;
+//   let shiftY = event.clientY - swiperSlide.getBoundingClientRect().top;
+
+//   swiperSlide.style.position = 'absolute';
+//   swiperSlide.style.zIndex = 1000;
+//   document.body.append(swiperSlide);
+
+//   moveAt(event.pageX, event.pageY);
+
+//   function moveAt(pageX, pageY) {
+//     swiperSlide.style.left = pageX - shiftX + 'px';
+//     swiperSlide.style.top = pageY - shiftY + 'px';
+//   }
+
+//   function onMouseMove(event) {
+//     moveAt(event.pageX, event.pageY);
+
+//     swiperSlide.hidden = true;
+//     let elemBelow = document.elementFromPoint(event.clientX, event.clientY);
+//     swiperSlide.hidden = false;
+
+//     if (!elemBelow) return;
+
+//     let droppableBelow = elemBelow.closest('.card-wrapper__oval');
+//     if (currentDroppable != droppableBelow) {
+//       if (currentDroppable) {
+//         leaveDroppable(currentDroppable);
+//       }
+//       currentDroppable = droppableBelow;
+//       if (currentDroppable) {
+//         enterDroppable(currentDroppable);
+//       }
+//     }
+//   }
+
+//   document.addEventListener('mousemove', onMouseMove);
+
+//   swiperSlide.onmouseup = function() {
+//     document.removeEventListener('mousemove', onMouseMove);
+//     swiperSlide.onmouseup = null;
+//   };
+
+// };
+
+// function enterDroppable(elem) {
+//   elem.style.background = 'pink';
+// }
+
+// function leaveDroppable(elem) {
+//   elem.style.background = '';
+// }
+
+// swiperSlide.ondragstart = function() {
+//   return false;
+// };

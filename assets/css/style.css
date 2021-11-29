@@ -156,6 +156,7 @@ body {
 }
 
 .swiper-button {
+  display: block;
   background-repeat: no-repeat !important;
   width: 12px !important;
   height: 100px !important;
@@ -427,6 +428,7 @@ body {
 }
 
 .card-wrapper__oval {
+  position: relative;
   background-color: #a7a7a7;
   border: 1px solid #a7a7a7;
   border-radius: 50%;
@@ -3288,4 +3290,23 @@ body {
   grid-column: 8;
   margin-top: -53px;
   margin-left: -28px;
+}
+
+/* #swiperSlide, */
+.swiper-slide.pos {
+  border-right: 0;
+  /* max-width: 200px; */
+  width: inherit !important;
+  height: inherit !important;
+  border-radius: 50%;
+}
+
+/* #swiperSlide:hover {
+  z-index: auto;
+  transform: none;
+} */
+
+.pos {
+  position: unset;
+  transform: none !important;
 }
