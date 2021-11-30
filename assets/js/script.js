@@ -263,7 +263,7 @@ window.addEventListener('load', () => {
   panelRight.addEventListener('drop', e => {
     e.preventDefault();
     let id = e.dataTransfer.getData('text');
-    let el = document.querySelector('#'+id);
+    let el = document.getElementById(id);
     if (el.getAttribute('data-type') == 'proto') {
       count++;
       let cpElem = el.cloneNode(true);
