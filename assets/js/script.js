@@ -205,10 +205,15 @@ var x=new XMLHttpRequest();
 
 window.addEventListener('load', () => {
   let count = posX = posY = blockPosX = blockPosY = 0;
-  let panelLeft = document.querySelector('.swiper-wrapper');
-  let panelRight = document.querySelector('.card-wrapper__oval');
+  let swiperWrapper = document.querySelector('.swiper-wrapper');
+  let cardWrapperOval = document.querySelector('.card-wrapper__oval');
 
-  panelLeft.addEventListener('mousedown', e => {
+  function handleClick(e) {
+    console.log('mousedown', e.target);
+  }
+  swiperWrapper.addEventListener('mousedown', handleClick);
+
+  swiperWrapper.addEventListener('mousedown', e => {
     if(e.target.classList.contains('swiper-slide')) {
       e.target.style.cursor = "grabbing";
       blockPosX = e.offsetX;
@@ -216,51 +221,51 @@ window.addEventListener('load', () => {
     }
   });
 
-  panelLeft.addEventListener('mouseup', e => {
+  swiperWrapper.addEventListener('mouseup', e => {
     if(e.target.classList.contains('swiper-slide')) {
       e.target.style.cursor = "grab";
     }
   });
 
-  panelLeft.addEventListener('dragstart', e => {
+  swiperWrapper.addEventListener('dragstart', e => {
     e.dataTransfer.setData('text', e.target.id);
   });
 
-  panelLeft.addEventListener('dragend', e => {
+  swiperWrapper.addEventListener('dragend', e => {
     e.target.style.cursor = "grab";
   });
 
-  panelRight.addEventListener('mousedown', e => {
+  cardWrapperOval.addEventListener('mousedown', e => {
     if(e.target.classList.contains('swiper-slide')) {
       e.target.style.cursor = "grabbing";
     }
   });
 
-  panelRight.addEventListener('mouseup', e => {
+  cardWrapperOval.addEventListener('mouseup', e => {
     if(e.target.classList.contains('swiper-slide')) {
       e.target.style.cursor = "grab";
     }
   });
 
-  panelRight.addEventListener('dragstart', e => {
+  cardWrapperOval.addEventListener('dragstart', e => {
     e.dataTransfer.setData('text', e.target.id);
   });
 
-  panelRight.addEventListener('dragend', e => {
+  cardWrapperOval.addEventListener('dragend', e => {
     e.target.style.cursor = "grab";
   });
 
-  panelRight.addEventListener('dragenter', e => {
+  cardWrapperOval.addEventListener('dragenter', e => {
     e.preventDefault();
   });
 
-  panelRight.addEventListener('dragover', e => {
+  cardWrapperOval.addEventListener('dragover', e => {
     e.preventDefault();
     posX = e.offsetX - blockPosX;
     posY = e.offsetY - blockPosY;
   });
 
-  panelRight.addEventListener('drop', e => {
+  cardWrapperOval.addEventListener('drop', e => {
     e.preventDefault();
     let id = e.dataTransfer.getData('text');
     let el = document.getElementById(id);
