@@ -492,7 +492,7 @@
                         </div>
                         <!-- sidebar-tab -->
                         <div class="sidebar-tabs__content active" id="ovalSmall" data-tab="10">
-                            <div class="card">
+                            <div class="card" id="card">
                                 <div class="card-wrapper" id="cw1">
                                     <div class="card-wrapper__oval" id="os1"></div>
                                     <div class="card-wrapper__oval" id="os2"></div>
@@ -883,11 +883,11 @@
                     <div class="sidebar-tabs sidebar-tabs_size">
                         <span class="sidebar-tabs__title">Размер</span>
                         <div class="sidebar-tab">
-                            <div class="sidebar-tab__item active" data-tab="19">
-                                <div class="sidebar-tab__size">A1</div>
+                            <div class="sidebar-tab__item active" data-tab="19" name="sizer" data-size="1">
+                                <button class="sidebar-tab__size">A1</button>
                             </div>
-                            <div class="sidebar-tab__item" data-tab="20">
-                                <div class="sidebar-tab__size">A2</div>
+                            <div class="sidebar-tab__item" data-tab="20" name="sizer" data-size="0.5">
+                                <button class="sidebar-tab__size">A2</button>
                             </div>
                         </div>
                         <!-- sidebar-tab -->
@@ -914,6 +914,7 @@
     <!-- Скрипты -->
     <script src="assets/js/swiper-bundle.min.js" type="text/javascript"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" type="text/javascript"></script>
+    <script src="assets/js/FileSaver.min.js"></script>
     <script src="assets/js/script.js" type="text/javascript"></script>
 </body>
 </html>

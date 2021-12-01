@@ -144,24 +144,49 @@ const swiper2 = new Swiper(".mySwiper", {
   },
 });
 
-// swiper2.on('scrollbarDragStart', function () {
-//   console.log('From slide Drag stared.');
+// Изменение размера Карты перед скачиванием
+let img = document.getElementById('card');
+if (!img.naturalWidth) img.naturalWidth = img.width;
+if (!img.naturalHeight) img.naturalHeight = img.height;
+
+let buttons = document.getElementsByName('sizer');
+for (let i = 0; i < buttons.length; i++) {
+  buttons[i].onclick = function() {
+    let size = this.getAttribute('data-size');
+    img.width = img.naturalWidth * size;
+    img.height = img.naturalHeight * size;
+  };
+};
+
+// Сохранение изображения в компьютер 1
+// $('.download').on('click', function(){
+// 	var link = document.createElement('a');
+// 	link.setAttribute('href', '/image.jpeg');
+// 	link.setAttribute('download', 'image.jpeg');
+// 	link.click();
+// 	return true;
 // });
 
-// Сохранение изображения в компьютер
-$('.download').on('click', function(){
-	var link = document.createElement('a');
-	link.setAttribute('href', '/image.jpeg');
-	link.setAttribute('download', 'image.jpeg');
-	link.click();
-	return true;
+// var x=new XMLHttpRequest();
+// 	x.open("GET", "http://danml.com/wave2.jpeg", true);
+// 	x.responseType = 'blob';
+// 	x.onload=function(e){download(x.response, "dlBinAjax.jpeg", "image/jpeg" ); }
+// 	x.send();
+
+
+// Сохранение изображения в компьютер 2
+let btnDownload = document.querySelector('.download');
+let img = document.querySelector('.card');
+
+btnDownload.addEventListener('click', () => {
+  let imagePath = img.getAttribute('src');
+  let fileName = getFileName(imagePath);
+  saveAs(imagePath, fileName);
 });
 
-var x=new XMLHttpRequest();
-	x.open("GET", "http://danml.com/wave2.jpeg", true);
-	x.responseType = 'blob';
-	x.onload=function(e){download(x.response, "dlBinAjax.jpeg", "image/jpeg" ); }
-	x.send();
+function getFileName(str) {
+  return str.substring(str.lastIndexOf('/') + 1);
+};
 
 
 // Drag and drop 1
