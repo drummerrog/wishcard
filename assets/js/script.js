@@ -175,18 +175,34 @@ for (let i = 0; i < buttons.length; i++) {
 
 
 // Сохранение изображения в компьютер 2
-let btnDownload = document.querySelector('.download');
-let img = document.querySelector('.card');
+// let btnDownload = document.querySelector('.download');
+// let img = document.querySelector('.card');
 
-btnDownload.addEventListener('click', () => {
-  let imagePath = img.getAttribute('src');
-  let fileName = getFileName(imagePath);
-  saveAs(imagePath, fileName);
-});
+// btnDownload.addEventListener('click', () => {
+//   let imagePath = img.getAttribute('src');
+//   let fileName = getFileName(imagePath);
+//   saveAs(imagePath, fileName);
+// });
 
-function getFileName(str) {
-  return str.substring(str.lastIndexOf('/') + 1);
-};
+// function getFileName(str) {
+//   return str.substring(str.lastIndexOf('/') + 1);
+// };
+
+
+// Сохранение изображения в компьютер 3
+// var canvas = new fabric.Canvas('c');
+
+// fabric.Image.fromURL('08.jpg', function(img) {
+// 	img.setWidth(200);
+// 	img.setHeight(200);
+// 	canvas.add(img);
+// });
+
+// $("#b").click(function(){
+// 	$("#c").get(0).toBlob(function(blob) {
+// 		saveAs(blob, "myIMG.png");
+// 	});
+// });
 
 
 // Drag and drop 1
