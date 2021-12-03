@@ -249,37 +249,11 @@ window.addEventListener('load', () => {
   let swiperWrapper = document.querySelector('.swiper-wrapper');
   let cardWrapperOval = document.querySelector('.card-wrapper__oval');
 
-  // THREE
-  // document.querySelectorAll('.swiper-slide').onclick = function() {
-  //   let element = document.createElement('div');
-
-  //   document.querySelector('.card-wrapper__oval').appendChild(element);
-  // };
-
-  // document.querySelector('.card-wrapper__oval').onclick = function(e) {
-  //   if (e.target.matches('.card-wrapper__oval div')) {
-  //     let nodes = [].slice.call(document.querySelector('.card-wrapper__oval div'))
-  //     console.log('my index is', nodes.indexOf(e.target) );
-  //   }
-  // };
-
-  // TWO
-  // swiperWrapper.addEventListener('mousedown', event => {
-  //   if (event.target.classList.contains('delete')) {
-  //     swiperWrapper.removeChild(event.target.perentElement)
-  //   }
-  // });
-
-  // document.body.addEventListener('mousedown', function(event) {
-  //   if (event.target.nodeName == 'swiper-slide')
-  //   console.log('mousedown', event.target.textContent);
-  // });
-
   // ONE
-  function handleClick(e) {
-    console.log('mousedown', e.target);
-  }
-  swiperWrapper.addEventListener('mousedown', handleClick);
+  // function handleClick(e) {
+  //   console.log('mousedown', e.target);
+  // }
+  // swiperWrapper.addEventListener('mousedown', handleClick);
 
   
   swiperWrapper.addEventListener('mousedown', e => {
@@ -361,6 +335,35 @@ window.addEventListener('load', () => {
 });
 
 
+  // TWO
+  // swiperWrapper.addEventListener('mousedown', event => {
+  //   if (event.target.classList.contains('delete')) {
+  //     swiperWrapper.removeChild(event.target.perentElement)
+  //   }
+  // });
+
+  // document.body.addEventListener('mousedown', function(event) {
+  //   if (event.target.nodeName == 'swiper-slide')
+  //   console.log('mousedown', event.target.textContent);
+  // });
+
+
+  // THREE
+  // document.querySelectorAll('.swiper-slide').onclick = function() {
+  //   let element = document.createElement('div');
+
+  //   document.querySelector('.card-wrapper__oval').appendChild(element);
+  // };
+
+  // document.querySelector('.card-wrapper__oval').onclick = function(e) {
+  //   if (e.target.matches('.card-wrapper__oval div')) {
+  //     let nodes = [].slice.call(document.querySelector('.card-wrapper__oval div'))
+  //     console.log('my index is', nodes.indexOf(e.target) );
+  //   }
+  // };
+
+
+// Drag and drop - another one
 // var itemsListCloned = document.querySelectorAll('.swiper-slide.clone-altered');
 
 // if( itemsListCloned.length ){

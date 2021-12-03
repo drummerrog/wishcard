@@ -3295,7 +3295,6 @@ body {
 /* #swiperSlide, */
 .swiper-slide.pos {
   border-right: 0;
-  /* max-width: 200px; */
   width: inherit !important;
   height: inherit !important;
   border-radius: 50%;
