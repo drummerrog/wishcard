@@ -1104,13 +1104,9 @@ body {
   height: 210px;
   grid-row: 1/5;
   grid-column: 3/5;
+  position: relative;
   margin-top: 38px;
   margin-left: -10px;
-  font-size: 14px;
-  display: grid;
-  text-transform: uppercase;
-  align-items: center;
-  text-align: center;
 }
 
 #os70 {
@@ -1165,6 +1161,19 @@ body {
   grid-column: 4;
   margin-top: -17px;
   margin-left: -4px;
+}
+
+#ct5 {
+  font-family: "GillSansLightC", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 14px;
+  position: absolute;
+  display: grid;
+  text-transform: uppercase;
+  text-align: center;
+  top: 85px;
+  left: -8px;
 }
 
 #cw6 {
@@ -1847,11 +1856,12 @@ body {
   grid-column: 4/6;
   margin-top: 74px;
   margin-left: 19px;
-  font-size: 14px;
+  position: relative;
+  /* font-size: 14px;
   display: grid;
   text-transform: uppercase;
   align-items: center;
-  text-align: center;
+  text-align: center; */
 }
 
 #ob19 {
@@ -2014,6 +2024,19 @@ body {
   grid-column: 7;
   margin-top: -37px;
   margin-left: 69px;
+}
+
+#ct10 {
+  font-family: "GillSansLightC", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 14px;
+  position: absolute;
+  display: grid;
+  text-transform: uppercase;
+  text-align: center;
+  top: 100px;
+  left: 55px;
 }
 
 .card-wrapper__quadrate {
@@ -2466,14 +2489,15 @@ body {
   grid-column: 2/4;
   margin-top: 14px;
   margin-left: 53px;
-  font-family: "GillSansLightC", sans-serif;
+  position: relative;
+  /* font-family: "GillSansLightC", sans-serif;
   font-weight: 300;
   font-style: normal;
   font-size: 14px;
   display: grid;
   text-transform: uppercase;
   align-items: center;
-  text-align: center;
+  text-align: center; */
 }
 
 #qs42 {
@@ -2510,6 +2534,19 @@ body {
   grid-column: 4;
   margin-top: 7px;
   margin-left: 11px;
+}
+
+#ct15 {
+  font-family: "GillSansLightC", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 14px;
+  position: absolute;
+  display: grid;
+  text-transform: uppercase;
+  text-align: center;
+  top: 60px;
+  left: 36px;
 }
 
 #cw16 {
@@ -3036,15 +3073,16 @@ body {
 }
 
 #qb20 {
-  font-size: 14px;
+  /* font-size: 14px;
   display: grid;
   text-transform: uppercase;
   align-items: center;
-  text-align: center;
+  text-align: center; */
   width: 251px;
   height: 247px;
   grid-row: 3/5;
   grid-column: 4/6;
+  position: relative;
   margin-top: 108px;
   margin-left: 64px;
 }
@@ -3292,12 +3330,26 @@ body {
   margin-left: -28px;
 }
 
+#ct20 {
+  font-family: "GillSansLightC", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 14px;
+  position: absolute;
+  display: grid;
+  text-transform: uppercase;
+  text-align: center;
+  top: 100px;
+  left: 55px;
+}
+
 /* #swiperSlide, */
 .swiper-slide.pos {
   border-right: 0;
   width: inherit !important;
   height: inherit !important;
   border-radius: 50%;
+  z-index: 1;
 }
 
 /* #swiperSlide:hover {
@@ -3308,4 +3360,12 @@ body {
 .pos {
   position: unset;
   transform: none !important;
+}
+
+.card-wrapper-text {
+  font-size: 14px;
+  text-transform: uppercase;
+  text-align: center;
+  position: absolute;
+  top: 70px;
 }

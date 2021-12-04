@@ -6,15 +6,15 @@ jsTriggers.forEach(function (trigger) {
     const id = this.getAttribute("data-tab"),
       content = document.querySelector(
         '.js-tab-content[data-tab="' + id + '"]'
-      ),
-      activeTrigger = document.querySelector(".js-tab-trigger.active"),
-      activeContent = document.querySelector(".js-tab-content.active");
-
-    activeTrigger.classList.remove("active");
-    trigger.classList.add("active");
-
-    activeContent.classList.remove("active");
-    content.classList.add("active");
+        ),
+        activeTrigger = document.querySelector(".js-tab-trigger.active"),
+        activeContent = document.querySelector(".js-tab-content.active");
+  
+      activeTrigger.classList.remove("active");
+      trigger.classList.add("active");
+  
+      activeContent.classList.remove("active");
+      content.classList.add("active");
   });
 });
 
@@ -82,24 +82,24 @@ function readURL(input) {
     for (let i = 0; i < input.files.length; ++i) {
       var reader = new FileReader();
       reader.onload = function (e) {
-        swiper1.appendSlide(`<img class="swiper-slide" src="${e.target.result}" alt="слайд" id="swiperSlide${i + 20}" draggable="true" data-type="proto">`);
+        swiper1.appendSlide('<img class="swiper-slide" src="'+e.target.result+'">');
       }
       reader.readAsDataURL(input.files[i]);
     }
   }
 }
 
-document.getElementById("imgInp").addEventListener('change', function () {
+document.getElementById("imgInp").addEventListener('change',function(){
   readURL(this);
 });
 
 // Удаление слайда
-document.querySelector('.Swiper').addEventListener('click', (e) => {
+document.querySelector('.Swiper').addEventListener('click', (e)=>{
   const target = e.target;
-  if (target.classList.contains('swiper-slide')) {
+  if(target.classList.contains('swiper-slide')) {
     const children = target.parentNode.children;
-    for (let i = 0; i < children.length; i++) {
-      if (target === children[i]) swiper1.removeSlide(i);
+    for( let i=0; i< children.length; i++)  {
+      if(target===children[i]) swiper1.removeSlide(i); 
     }
   }
 });
@@ -151,7 +151,7 @@ if (!img.naturalHeight) img.naturalHeight = img.height;
 
 let buttons = document.getElementsByName('sizer');
 for (let i = 0; i < buttons.length; i++) {
-  buttons[i].onclick = function () {
+  buttons[i].onclick = function() {
     let size = this.getAttribute('data-size');
     img.width = img.naturalWidth * size;
     img.height = img.naturalHeight * size;
@@ -246,152 +246,90 @@ for (let i = 0; i < buttons.length; i++) {
 
 window.addEventListener('load', () => {
   let count = posX = posY = blockPosX = blockPosY = 0;
-  let swiperWrapper = document.querySelectorAll('.swiper-wrapper');
-  let cardWrapperOval = document.querySelectorAll('.card-wrapper__oval');
-  let cardWrapperQuadrate = document.querySelectorAll('.card-wrapper__quadrate');
+  let swiperWrapper = document.querySelector('.swiper-wrapper');
+  let cardWrapperOval = document.querySelector('.card-wrapper__oval');
 
   // ONE
   // function handleClick(e) {
   //   console.log('mousedown', e.target);
   // }
   // swiperWrapper.addEventListener('mousedown', handleClick);
-
-  swiperWrapper.forEach(item => {
-    item.addEventListener('mousedown', e => {
-      if (e.target.classList.contains('swiper-slide')) {
-        e.target.style.cursor = "grabbing";
-        blockPosX = e.offsetX;
-        blockPosY = e.offsetY;
-      }
-    });
-
-    item.addEventListener('mouseup', e => {
-      if (e.target.classList.contains('swiper-slide')) {
-        e.target.style.cursor = "grab";
-      }
-    });
-
-    item.addEventListener('dragstart', e => {
-      e.dataTransfer.setData('text', e.target.id);
-    });
-
-    item.addEventListener('dragend', e => {
-      e.target.style.cursor = "grab";
-    });
+  
+  swiperWrapper.addEventListener('mousedown', e => {
+    if(e.target.classList.contains('swiper-slide')) {
+      e.target.style.cursor = "grabbing";
+      blockPosX = e.offsetX;
+      blockPosY = e.offsetY;
+    }
   });
 
-  cardWrapperOval.forEach(item => {
-    item.addEventListener('mousedown', e => {
-      if (e.target.classList.contains('swiper-slide')) {
-        e.target.style.cursor = "grabbing";
-      }
-    });
-
-    item.addEventListener('mouseup', e => {
-      if (e.target.classList.contains('swiper-slide')) {
-        e.target.style.cursor = "grab";
-      }
-    });
-
-    item.addEventListener('dragstart', e => {
-      e.dataTransfer.setData('text', e.target.id);
-    });
-
-    item.addEventListener('dragend', e => {
+  swiperWrapper.addEventListener('mouseup', e => {
+    if(e.target.classList.contains('swiper-slide')) {
       e.target.style.cursor = "grab";
-    });
-
-    item.addEventListener('dragenter', e => {
-      e.preventDefault();
-    });
-
-    item.addEventListener('dragover', e => {
-      e.preventDefault();
-      posX = e.offsetX - blockPosX;
-      posY = e.offsetY - blockPosY;
-    });
-
-    item.addEventListener('drop', e => {
-      e.preventDefault();
-      let id = e.dataTransfer.getData('text');
-      let el = document.getElementById(id);
-      if (el.getAttribute('data-type') == 'proto') {
-        count++;
-        let cpElem = el.cloneNode(true);
-        cpElem.setAttribute('id', id + "_" + count);
-        cpElem.setAttribute('data-type', 'elem');
-        cpElem.classList.add('pos');
-        cpElem.style.cursor = "grab";
-        e.target.appendChild(cpElem);
-      } else if (el.getAttribute('data-type') == 'elem') {
-        el.style.position = "absolute";
-        if (posX < 0) {
-          posX = 0;
-        }
-        if (posY < 0) {
-          posY = 0;
-        }
-        el.style.top = posY + "px";
-        el.style.left = posX + "px";
-      }
-    });
+    }
   });
 
-  cardWrapperQuadrate.forEach(item => {
-    item.addEventListener('mousedown', e => {
-      if (e.target.classList.contains('swiper-slide')) {
-        e.target.style.cursor = "grabbing";
-      }
-    });
+  swiperWrapper.addEventListener('dragstart', e => {
+    e.dataTransfer.setData('text', e.target.id);
+  });
 
-    item.addEventListener('mouseup', e => {
-      if (e.target.classList.contains('swiper-slide')) {
-        e.target.style.cursor = "grab";
-      }
-    });
+  swiperWrapper.addEventListener('dragend', e => {
+    e.target.style.cursor = "grab";
+  });
 
-    item.addEventListener('dragstart', e => {
-      e.dataTransfer.setData('text', e.target.id);
-    });
+  cardWrapperOval.addEventListener('mousedown', e => {
+    if(e.target.classList.contains('swiper-slide')) {
+      e.target.style.cursor = "grabbing";
+    }
+  });
 
-    item.addEventListener('dragend', e => {
+  cardWrapperOval.addEventListener('mouseup', e => {
+    if(e.target.classList.contains('swiper-slide')) {
       e.target.style.cursor = "grab";
-    });
+    }
+  });
 
-    item.addEventListener('dragenter', e => {
-      e.preventDefault();
-    });
+  cardWrapperOval.addEventListener('dragstart', e => {
+    e.dataTransfer.setData('text', e.target.id);
+  });
 
-    item.addEventListener('dragover', e => {
-      e.preventDefault();
-      posX = e.offsetX - blockPosX;
-      posY = e.offsetY - blockPosY;
-    });
+  cardWrapperOval.addEventListener('dragend', e => {
+    e.target.style.cursor = "grab";
+  });
 
-    item.addEventListener('drop', e => {
-      e.preventDefault();
-      let id = e.dataTransfer.getData('text');
-      let el = document.getElementById(id);
-      if (el.getAttribute('data-type') == 'proto') {
-        count++;
-        let cpElem = el.cloneNode(true);
-        cpElem.setAttribute('id', id + "_" + count);
-        cpElem.setAttribute('data-type', 'elem');
-        cpElem.classList.add('pos');
-        cpElem.style.cursor = "grab";
-        e.target.appendChild(cpElem);
-      } else if (el.getAttribute('data-type') == 'elem') {
-        el.style.position = "absolute";
-        if (posX < 0) {
-          posX = 0;
-        }
-        if (posY < 0) {
-          posY = 0;
-        }
-        el.style.top = posY + "px";
-        el.style.left = posX + "px";
+  cardWrapperOval.addEventListener('dragenter', e => {
+    e.preventDefault();
+  });
+
+  cardWrapperOval.addEventListener('dragover', e => {
+    e.preventDefault();
+    posX = e.offsetX - blockPosX;
+    posY = e.offsetY - blockPosY;
+  });
+
+  cardWrapperOval.addEventListener('drop', e => {
+    e.preventDefault();
+    let id = e.dataTransfer.getData('text');
+    let el = document.getElementById(id);
+    if (el.getAttribute('data-type') == 'proto') {
+      count++;
+      let cpElem = el.cloneNode(true);
+      cpElem.setAttribute('id', id + "_" + count);
+      cpElem.setAttribute('data-type', 'elem');
+      cpElem.classList.add('pos');
+      cpElem.style.cursor = "grab";
+      e.target.appendChild(cpElem);
+    } else if (el.getAttribute('data-type') == 'elem') {
+      el.style.position = "absolute";
+      if (posX < 0) {
+        posX = 0;
       }
-    });
+      if (posY < 0) {
+        posY = 0;
+      }
+      el.style.top = posY + "px";
+      el.style.left = posX + "px";
+    }
   });
 });
 
@@ -464,20 +402,20 @@ window.addEventListener('load', () => {
 
 // tasksListElement.addEventListener(`dragover`, (evt) => {
 //   evt.preventDefault();
-
+  
 //   const activeElement = tasksListElement.querySelector(`.selected`);
 //   const currentElement = evt.target;
 //   const isMoveable = activeElement !== currentElement &&
 //     currentElement.classList.contains(`card-wrapper__oval`);
-
+    
 //   if (!isMoveable) {
 //     return;
 //   }
-
+  
 //   const nextElement = (currentElement === activeElement.nextElementSibling) ?
 // 		currentElement.nextElementSibling :
 // 		currentElement;
-
+		
 // 	tasksListElement.insertBefore(activeElement, nextElement);
 // });
 
@@ -507,14 +445,14 @@ window.addEventListener('load', () => {
 // }
 
 // document.addEventListener("dragstart", function( event ) {
-
+  
 //   dragged = event.target;
-
+  
 //   event.target.style.opacity = .5;
 // }, false);
 
 // document.addEventListener("dragend", function( event ) {
-
+  
 //   event.target.style.opacity = "";
 // }, false);
 
