@@ -1100,11 +1100,19 @@ body {
 }
 
 #os69 {
+  font-family: "GillSansLightC", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 14px;
+  position: relative;
+  display: grid;
+  align-items: center;
+  text-align: center;
+  text-transform: uppercase;
   width: 165px;
   height: 210px;
   grid-row: 1/5;
   grid-column: 3/5;
-  position: relative;
   margin-top: 38px;
   margin-left: -10px;
 }
@@ -1163,7 +1171,7 @@ body {
   margin-left: -4px;
 }
 
-#ct5 {
+/* #ct5 {
   font-family: "GillSansLightC", sans-serif;
   font-weight: 300;
   font-style: normal;
@@ -1174,7 +1182,7 @@ body {
   text-align: center;
   top: 85px;
   left: -8px;
-}
+} */
 
 #cw6 {
   width: 474px;
@@ -1850,18 +1858,21 @@ body {
 }
 
 #ob18 {
+  font-family: "GillSansLightC", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 14px;
+  position: relative;
+  display: grid;
+  align-items: center;
+  text-align: center;
+  text-transform: uppercase;
   width: 239px;
   height: 245px;
   grid-row: 3/5;
   grid-column: 4/6;
   margin-top: 74px;
   margin-left: 19px;
-  position: relative;
-  /* font-size: 14px;
-  display: grid;
-  text-transform: uppercase;
-  align-items: center;
-  text-align: center; */
 }
 
 #ob19 {
@@ -2026,7 +2037,7 @@ body {
   margin-left: 69px;
 }
 
-#ct10 {
+/* #ct10 {
   font-family: "GillSansLightC", sans-serif;
   font-weight: 300;
   font-style: normal;
@@ -2037,7 +2048,7 @@ body {
   text-align: center;
   top: 100px;
   left: 55px;
-}
+} */
 
 .card-wrapper__quadrate {
   background-color: #a7a7a7;
@@ -2483,21 +2494,21 @@ body {
 }
 
 #qs41 {
+  font-family: "GillSansLightC", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 14px;
+  position: relative;
+  display: grid;
+  align-items: center;
+  text-align: center;
+  text-transform: uppercase;
   width: 199px;
   height: 179px;
   grid-row: 2/4;
   grid-column: 2/4;
   margin-top: 14px;
   margin-left: 53px;
-  position: relative;
-  /* font-family: "GillSansLightC", sans-serif;
-  font-weight: 300;
-  font-style: normal;
-  font-size: 14px;
-  display: grid;
-  text-transform: uppercase;
-  align-items: center;
-  text-align: center; */
 }
 
 #qs42 {
@@ -2536,7 +2547,7 @@ body {
   margin-left: 11px;
 }
 
-#ct15 {
+/* #ct15 {
   font-family: "GillSansLightC", sans-serif;
   font-weight: 300;
   font-style: normal;
@@ -2547,7 +2558,7 @@ body {
   text-align: center;
   top: 60px;
   left: 36px;
-}
+} */
 
 #cw16 {
   width: 502px;
@@ -3073,16 +3084,19 @@ body {
 }
 
 #qb20 {
-  /* font-size: 14px;
+  font-family: "GillSansLightC", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 14px;
+  position: relative;
   display: grid;
-  text-transform: uppercase;
   align-items: center;
-  text-align: center; */
+  text-align: center;
+  text-transform: uppercase;
   width: 251px;
   height: 247px;
   grid-row: 3/5;
   grid-column: 4/6;
-  position: relative;
   margin-top: 108px;
   margin-left: 64px;
 }
@@ -3330,7 +3344,7 @@ body {
   margin-left: -28px;
 }
 
-#ct20 {
+/* #ct20 {
   font-family: "GillSansLightC", sans-serif;
   font-weight: 300;
   font-style: normal;
@@ -3341,23 +3355,25 @@ body {
   text-align: center;
   top: 100px;
   left: 55px;
-}
+} */
 
-/* #swiperSlide, */
-.swiper-slide.pos {
-  border-right: 0;
+.swiper-slide.pos1 {
+  position: absolute;
   width: inherit !important;
   height: inherit !important;
   border-radius: 50%;
-  z-index: 1;
+  border-right: 0;
 }
 
-/* #swiperSlide:hover {
-  z-index: auto;
-  transform: none;
-} */
+.swiper-slide.pos2 {
+  position: absolute;
+  width: inherit !important;
+  height: inherit !important;
+  border-right: 0;
+}
 
-.pos {
+.pos1,
+.pos2 {
   position: unset;
   transform: none !important;
 }

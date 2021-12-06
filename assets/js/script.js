@@ -306,7 +306,7 @@ window.addEventListener('load', () => {
         let cpElem = el.cloneNode(true);
         cpElem.setAttribute('id', id + "_" + count);
         cpElem.setAttribute('data-type', 'elem');
-        cpElem.classList.add('pos');
+        cpElem.classList.add('pos1');
         cpElem.style.cursor = "grab";
         e.target.appendChild(cpElem);
       } else if (el.getAttribute('data-type') == 'elem') {
@@ -363,7 +363,7 @@ window.addEventListener('load', () => {
         let cpElem = el.cloneNode(true);
         cpElem.setAttribute('id', id + "_" + count);
         cpElem.setAttribute('data-type', 'elem');
-        cpElem.classList.add('pos');
+        cpElem.classList.add('pos2');
         cpElem.style.cursor = "grab";
         e.target.appendChild(cpElem);
       } else if (el.getAttribute('data-type') == 'elem') {
