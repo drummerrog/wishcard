@@ -144,20 +144,6 @@ const swiper2 = new Swiper(".mySwiper", {
   },
 });
 
-// Изменение размера Карты перед скачиванием
-let img = document.getElementById('card');
-if (!img.naturalWidth) img.naturalWidth = img.width;
-if (!img.naturalHeight) img.naturalHeight = img.height;
-
-let buttons = document.getElementsByName('sizer');
-for (let i = 0; i < buttons.length; i++) {
-  buttons[i].onclick = function () {
-    let size = this.getAttribute('data-size');
-    img.width = img.naturalWidth * size;
-    img.height = img.naturalHeight * size;
-  };
-};
-
 // Сохранение изображения в компьютер 1
 // $('.download').on('click', function(){
 // 	var link = document.createElement('a');
@@ -395,6 +381,31 @@ window.addEventListener('load', () => {
   });
 });
 
+// Изменение размера Карты перед скачиванием
+let img = document.getElementById('card');
+if (!img.naturalWidth) img.naturalWidth = img.width;
+if (!img.naturalHeight) img.naturalHeight = img.height;
+
+let buttons = document.getElementsByName('sizer');
+for (let i = 0; i < buttons.length; i++) {
+  buttons[i].onclick = function () {
+    let size = this.getAttribute('data-size');
+    img.width = img.naturalWidth * size;
+    img.height = img.naturalHeight * size;
+  };
+};
+
+// Сохранение изображения в компьютер 4
+let btnDownload = document.querySelector('.download');
+
+btnDownload.addEventListener("click", () => {
+  html2canvas(document.getElementById("card")).then((canvas) => {
+    const link = document.createElement('a');
+    link.download = 'wishcard.jpg';
+    link.href = canvas.toDataURL("image/jpeg"); 
+    link.click();
+  });
+});
 
   // TWO
   // swiperWrapper.addEventListener('mousedown', event => {
