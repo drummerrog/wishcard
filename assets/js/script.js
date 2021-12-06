@@ -82,7 +82,8 @@ function readURL(input) {
     for (let i = 0; i < input.files.length; ++i) {
       var reader = new FileReader();
       reader.onload = function (e) {
-        swiper1.appendSlide(`<img class="swiper-slide" src="${e.target.result}" alt="слайд" id="swiperSlide${i + 20}" draggable="true" data-type="proto">`);
+        let now = Date.now();
+        swiper1.appendSlide(`<img class="swiper-slide" src="${e.target.result}" alt="слайд" id="swiperSlide-${now}" draggable="true" data-type="proto">`);
       }
       reader.readAsDataURL(input.files[i]);
     }
