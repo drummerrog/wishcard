@@ -4,196 +4,196 @@
     overflow-x: hidden;
   }
 
-  body {
+  /* body {
     font-size: 19px;
     background-position-x: 0;
     background-size: 144%;
-  }
+  } */
 
-  .container {
+  /* .container {
     max-width: 1200px;
     width: 90%;
     height: auto;
     margin: auto;
-  }
+  } */
 
-  .info-title {
+  /* .info-title {
     font-size: 200px;
     margin: 30px 0 140px;
-  }
+  } */
 
-  .tab-header__item:before {
+  /* .tab-header__item:before {
     content: "";
     height: 133px;
-  }
+  } */
 
-  .tab-content.active {
+  /* .tab-content.active {
     height: 132.22px;
-  }
+  } */
 
-  .swiper-slide {
+  /* .swiper-slide {
     width: 132.22px !important;
-  }
+  } */
 
-  .form-input {
+  /* .form-input {
     margin-bottom: -30px;
-  }
+  } */
 
-  .form-label {
+  /* .form-label {
     width: 132.7px !important;
-  }
+  } */
 
-  .wishcard {
-    padding-bottom: 56%;
-  }
+  /* .wishcard {
+    padding-bottom: 54%;
+  } */
 
-  .wishcard-wrapper {
+  /* .wishcard-wrapper {
     display: inline-flex;
     flex-direction: column;
-  }
+  } */
 
-  .sidebar-tabs {
+  /* .sidebar-tabs {
     width: inherit;
     height: auto;
     top: 1045px;
-  }
+  } */
 
-  .sidebar-tab {
-    height: 90px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-  }
+  /* .sidebar-tab { */
+  /* height: 90px; */
+  /* display: flex; */
+  /* flex-direction: row; */
+  /* justify-content: space-around; */
+  /* } */
 
-  .white {
+  /* .white {
     margin-top: 10px;
-  }
+  } */
 
-  .sidebar-tab__figure {
+  /* .sidebar-tab__figure {
     margin-top: 0;
-  }
+  } */
 
-  .figure {
+  /* .figure {
     padding-bottom: 10px;
-  }
+  } */
 
-  .oval-top {
+  /* .oval-top {
     margin-bottom: 20px;
-  }
+  } */
 
-  .oval-bottom {
+  /* .oval-bottom {
     margin-bottom: -35px;
-  }
+  } */
 
-  .sidebar-tab__size {
+  /* .sidebar-tab__size {
     margin: 10px 0;
     width: 102px;
     height: 59px;
-  }
+  } */
 
-  .sidebar-tabs_size {
+  /* .sidebar-tabs_size {
     top: 760px;
     left: 707px;
-  }
+  } */
 
-  .sidebar-tabs__title {
+  /* .sidebar-tabs__title {
     height: 35px;
     line-height: 2;
-  }
+  } */
 
-  .sidebar-button {
+  /* .sidebar-button {
     width: 490px;
     height: 126px;
     position: relative;
     top: 760px;
     left: 707px;
-  }
+  } */
 
-  .download {
+  /* .download {
     width: 435px;
     height: 60px;
     top: 1100px;
-  }
+  } */
 
-  .button {
+  /* .button {
     font-size: 36px;
     transform: rotate(90deg);
     position: absolute;
     top: -60px;
-  }
+  } */
 
-  .sidebar-tabs__content {
+  /* .sidebar-tabs__content {
     left: 0;
-  }
+  } */
 
-  .sidebar-tabs__content.active {
+  /* .sidebar-tabs__content.active {
     top: -1050px;
-  }
+  } */
 
-  #ovalSmall {
+  /* #ovalSmall {
     top: -1193px;
-  }
+  } */
 
-  .card {
+  /* .card {
     width: 1178px;
     display: grid;
     flex-direction: column;
     -webkit-overflow-scrolling: touch;
     overflow-x: auto;
     padding: 5px 10px;
-  }
+  } */
 
-  #cw1 {
+  /* #cw1 {
     grid-template-rows: 71px 70px 57px 91px 85px;
-  }
+  } */
 
-  #cw2 {
+  /* #cw2 {
     grid-row: 1 !important;
     grid-column: 2 !important;
-  }
+  } */
 
-  #cw3 {
+  /* #cw3 {
     grid-row: 1 !important;
     grid-column: 3 !important;
-  }
+  } */
 
-  #cw4 {
+  /* #cw4 {
     grid-row: 2 !important;
     grid-column: 1 !important;
     grid-template-rows: 75px 85px 90px 64px;
-  }
+  } */
 
-  #cw5 {
+  /* #cw5 {
     grid-row: 2 !important;
     grid-column: 2 !important;
     grid-template-rows: 74px 57px 45px 75px 98px;
-  }
+  } */
 
-  #cw6 {
+  /* #cw6 {
     grid-row: 2 !important;
     grid-column: 3 !important;
     margin-top: -13px;
     margin-left: -110px;
-  }
+  } */
 
-  #cw7 {
+  /* #cw7 {
     grid-row: 3 !important;
     grid-column: 1 !important;
     grid-template-rows: 69px 57px 54px 70px;
-  }
+  } */
 
-  #cw8 {
+  /* #cw8 {
     grid-row: 3 !important;
     grid-column: 2 !important;
     grid-template-rows: 50px 60px 94px 50px;
-  }
+  } */
 
-  #cw9 {
+  /* #cw9 {
     grid-row: 3 !important;
     grid-column: 3 !important;
     grid-template-rows: 78px 40px 70px 71px;
     margin-left: -127px;
-  }
+  } */
 
   #ovalBig {
     top: -1193px;
