@@ -266,18 +266,18 @@
     margin-left: -102px;
   } */
 
-  #quadrateBig {
+  /* #quadrateBig {
     top: -1193px;
-  }
+  } */
 
-  #cw20 {
+  /* #cw20 {
     width: 1400px;
     display: grid;
     justify-content: space-between;
     align-content: space-between;
     grid-template-columns: 99px 136px 129px 177px 120px 131px 59px 203px;
     grid-template-rows: 141px 44px 59px 80px 126px 50px 75px 107px;
-  }
+  } */
 }
 
 @media (max-width: 1439px) and (min-width: 1024px) {
