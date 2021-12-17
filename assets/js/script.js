@@ -383,18 +383,18 @@ window.addEventListener('load', () => {
 });
 
 // Изменение размера Карты перед скачиванием
-let img = document.getElementById('card');
-if (!img.naturalWidth) img.naturalWidth = img.width;
-if (!img.naturalHeight) img.naturalHeight = img.height;
+// let img = document.getElementById('card');
+// if (!img.naturalWidth) img.naturalWidth = img.width;
+// if (!img.naturalHeight) img.naturalHeight = img.height;
 
-let buttons = document.getElementsByName('sizer');
-for (let i = 0; i < buttons.length; i++) {
-  buttons[i].onclick = function () {
-    let size = this.getAttribute('data-size');
-    img.width = img.naturalWidth * size;
-    img.height = img.naturalHeight * size;
-  };
-};
+// let buttons = document.getElementsByName('sizer');
+// for (let i = 0; i < buttons.length; i++) {
+//   buttons[i].onclick = function () {
+//     let size = this.getAttribute('data-size');
+//     img.width = img.naturalWidth * size;
+//     img.height = img.naturalHeight * size;
+//   };
+// };
 
 // Сохранение изображения в компьютер 4
 let btnDownload = document.querySelector('.download');
