@@ -379,6 +379,7 @@ body {
   background-color: rgb(255, 255, 255);
   box-shadow: 4px 4.785px 6.04px 0.96px rgba(143, 143, 143, 0.56);
   border: 1px solid #000;
+  cursor: pointer;
 }
 
 .button {

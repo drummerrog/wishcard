@@ -397,14 +397,55 @@ window.addEventListener('load', () => {
 // };
 
 // Сохранение изображения в компьютер 4
+// БЛОК №1 ВЫТАСКИВАЕМ  ЦВЕТ  ДЛЯ  ПЛАШКИ
+let elToDownloadBgColor = 'rgb(255, 255, 255)';
+let blockColors;
+const colorTitle = Array.from(document.querySelectorAll('span')) // находим все элементы span
+colorTitle.forEach((itm,indx)=>{
+  // находим элемент "Цвет" и запоминаем в blockColors соседний блок, содержащий экземпляры цветов
+  itm.textContent==='Цвет'? blockColors = colorTitle[indx]['nextElementSibling']:null; 
+})
+blockColors.addEventListener('click',(e)=>{// вешаем обработчик событий на blockColors
+  const trgt = e.target;
+  // вытаскиваем цвет для плашки
+  elToDownloadBgColor = window.getComputedStyle(trgt)['backgroundColor']
+  console.log(`Цвет плашки = ${elToDownloadBgColor}`)
+})
+
+// БЛОК №2  ВЫБОР  РАЗМЕРА  ИЗОБРАЖЕНИЯ
+let canvasScale = 7;
+const sizeBtns = document.querySelector('.sidebar-tabs_size');
+sizeBtns.addEventListener('click', (e) => {
+  e.preventDefault();
+  const trgt = e.target;
+  const sizes = Array.from(sizeBtns.querySelectorAll('.sidebar-tab__size'));
+  if (trgt == sizes[0]) {
+    canvasScale = 10;
+  } // пользователь выбрал формат А1
+  if (trgt == sizes[1]) {
+    canvasScale = 7;
+  } // пользователь выбрал формат А2
+});
+
+// БЛОК №3  СОХРАНЕНИЕ  ПЛАШКИ  НА  КОМП
 let btnDownload = document.querySelector('.download');
 
-btnDownload.addEventListener("click", () => {
-  html2canvas(document.getElementById("card")).then((canvas) => {
-    const link = document.createElement('a');
-    link.download = 'wishcard.jpg';
-    link.href = canvas.toDataURL("image/jpeg"); 
-    link.click();
+$('button').on('click', () => {
+  const ElToDownloadID = $('.sidebar-tabs__content.active')[1].id;
+  const elToDownload = document.querySelector(`#${ElToDownloadID}`);
+  html2canvas(elToDownload, {
+    backgroundColor: `${elToDownloadBgColor}`,
+    scale: canvasScale,
+  }).then((canvas) => {
+    const body = $('body');
+    const link = $('<a></a>');
+    link.attr({
+      href: canvas.toDataURL('image/jpeg'),
+      download: 'wishcard.jpg',
+    });
+    body.append(link);
+    link[0].click();
+    link.remove();
   });
 });
 
