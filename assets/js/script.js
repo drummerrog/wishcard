@@ -71,10 +71,6 @@ const swiper1 = new Swiper(".Swiper", {
   },
 });
 
-// swiper1.on('scrollbarDragStart', function () {
-//   console.log('From slide Drag stared.');
-// });
-
 // Загрузка изображений на страницу сайта
 function readURL(input) {
   if (input.files && input.files[0]) {
@@ -121,20 +117,6 @@ const swiper2 = new Swiper(".mySwiper", {
   mousewheel: {
     invert: true,
   },
-  // breakpoints: {
-  //   320: {
-  //     slidesPerView: 1
-  //   },
-  //   375: {
-  //     slidesPerView: 2
-  //   },
-  //   425: {
-  //     slidesPerView: 2
-  //   },
-  //   768: {
-  //     slidesPerView: 3
-  //   }
-  // },
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
@@ -145,103 +127,12 @@ const swiper2 = new Swiper(".mySwiper", {
   },
 });
 
-// Сохранение изображения в компьютер 1
-// $('.download').on('click', function(){
-// 	var link = document.createElement('a');
-// 	link.setAttribute('href', '/image.jpeg');
-// 	link.setAttribute('download', 'image.jpeg');
-// 	link.click();
-// 	return true;
-// });
-
-// var x=new XMLHttpRequest();
-// 	x.open("GET", "http://danml.com/wave2.jpeg", true);
-// 	x.responseType = 'blob';
-// 	x.onload=function(e){download(x.response, "dlBinAjax.jpeg", "image/jpeg" ); }
-// 	x.send();
-
-
-// Сохранение изображения в компьютер 2
-// let btnDownload = document.querySelector('.download');
-// let img = document.querySelector('.card');
-
-// btnDownload.addEventListener('click', () => {
-//   let imagePath = img.getAttribute('src');
-//   let fileName = getFileName(imagePath);
-//   saveAs(imagePath, fileName);
-// });
-
-// function getFileName(str) {
-//   return str.substring(str.lastIndexOf('/') + 1);
-// };
-
-
-// Сохранение изображения в компьютер 3
-// var canvas = new fabric.Canvas('c');
-
-// fabric.Image.fromURL('08.jpg', function(img) {
-// 	img.setWidth(200);
-// 	img.setHeight(200);
-// 	canvas.add(img);
-// });
-
-// $("#b").click(function(){
-// 	$("#c").get(0).toBlob(function(blob) {
-// 		saveAs(blob, "myIMG.png");
-// 	});
-// });
-
-
-// Drag and drop 1
-// function allowDrop(ev) {
-//   ev.preventDefault();
-// }
-
-// function drag(ev) {
-//   ev.dataTransfer.setData("text", ev.target.id);
-// }
-
-// function drop(ev) {
-//   ev.preventDefault();
-//   var data = ev.dataTransfer.getData("text");
-//   ev.target.appendChild(document.getElementById(data));
-// }
-
-// function dragStart(event) {
-//   event.originalEvent.dataTransfer.effectAllowed = 'move';
-//   event.originalEvent.dataTransfer.setData("text/plain", event.target);
-//   console.log(event);
-//   console.log('Dragging...');
-
-//   var clone = event.target.cloneNode(true);
-//   event.target.parentNode.appendChild(clone);
-//   event.target.ghostDragger = clone;
-
-//   $(clone).addClass('dragging');
-//   return true;
-// }
-
-// function dragging(event){
-//   var clone = event.target.ghostDragger;
-// }
-
-// function stopDrag(event){
-//   var clone = event.target.ghostDragger;
-//   clone.parentNode.removeChild(clone);
-// }
-
-
+// Drag and drop
 window.addEventListener('load', () => {
   let count = posX = posY = blockPosX = blockPosY = 0;
   let swiperWrapper = document.querySelectorAll('.swiper-wrapper');
   let cardWrapperOval = document.querySelectorAll('.card-wrapper__oval');
   let cardWrapperQuadrate = document.querySelectorAll('.card-wrapper__quadrate');
-
-  // ONE
-  // function handleClick(e) {
-  //   console.log('mousedown', e.target);
-  // }
-  // swiperWrapper.addEventListener('mousedown', handleClick);
 
   swiperWrapper.forEach(item => {
     item.addEventListener('mousedown', e => {
@@ -382,21 +273,7 @@ window.addEventListener('load', () => {
   });
 });
 
-// Изменение размера Карты перед скачиванием
-// let img = document.getElementById('card');
-// if (!img.naturalWidth) img.naturalWidth = img.width;
-// if (!img.naturalHeight) img.naturalHeight = img.height;
-
-// let buttons = document.getElementsByName('sizer');
-// for (let i = 0; i < buttons.length; i++) {
-//   buttons[i].onclick = function () {
-//     let size = this.getAttribute('data-size');
-//     img.width = img.naturalWidth * size;
-//     img.height = img.naturalHeight * size;
-//   };
-// };
-
-// Сохранение изображения в компьютер 4
+// Сохранение изображения в компьютер
 // БЛОК №1 ВЫТАСКИВАЕМ  ЦВЕТ  ДЛЯ  ПЛАШКИ
 let elToDownloadBgColor = 'rgb(255, 255, 255)';
 let blockColors;
@@ -448,187 +325,3 @@ $('button').on('click', () => {
     link.remove();
   });
 });
-
-  // TWO
-  // swiperWrapper.addEventListener('mousedown', event => {
-  //   if (event.target.classList.contains('delete')) {
-  //     swiperWrapper.removeChild(event.target.perentElement)
-  //   }
-  // });
-
-  // document.body.addEventListener('mousedown', function(event) {
-  //   if (event.target.nodeName == 'swiper-slide')
-  //   console.log('mousedown', event.target.textContent);
-  // });
-
-
-  // THREE
-  // document.querySelectorAll('.swiper-slide').onclick = function() {
-  //   let element = document.createElement('div');
-
-  //   document.querySelector('.card-wrapper__oval').appendChild(element);
-  // };
-
-  // document.querySelector('.card-wrapper__oval').onclick = function(e) {
-  //   if (e.target.matches('.card-wrapper__oval div')) {
-  //     let nodes = [].slice.call(document.querySelector('.card-wrapper__oval div'))
-  //     console.log('my index is', nodes.indexOf(e.target) );
-  //   }
-  // };
-
-
-// Drag and drop - another one
-// var itemsListCloned = document.querySelectorAll('.swiper-slide.clone-altered');
-
-// if( itemsListCloned.length ){
-// 	[].forEach.call(itemsListCloned, function(item) {
-// 		var draggedEl = item.cloneNode();
-// 		var currentClone = null;
-
-// 		draggedEl.className += " dragged";
-
-// 		item.addEventListener('dragstart', function(e){
-// 			currentClone = this.parentElement.insertBefore(draggedEl, item);
-// 			e.dataTransfer.setDragImage(currentClone, 0, 0);
-// 		},false);
-
-// 		item.addEventListener('dragend', function(e){
-// 			currentClone.remove();
-// 		},false);
-// 	});
-// }
-
-
-// Drag and drop 2
-// const tasksListElement = document.querySelector(`.swiper-wrapper`);
-// const taskElements = tasksListElement.querySelectorAll(`.swiper-slide`);
-
-// for (const task of taskElements) {
-//   task.draggable = true;
-// }
-
-// tasksListElement.addEventListener(`dragstart`, (evt) => {
-//   evt.target.classList.add(`selected`);
-// });
-
-// tasksListElement.addEventListener(`dragend`, (evt) => {
-//   evt.target.classList.remove(`selected`);
-// });
-
-// tasksListElement.addEventListener(`dragover`, (evt) => {
-//   evt.preventDefault();
-
-//   const activeElement = tasksListElement.querySelector(`.selected`);
-//   const currentElement = evt.target;
-//   const isMoveable = activeElement !== currentElement &&
-//     currentElement.classList.contains(`card-wrapper__oval`);
-
-//   if (!isMoveable) {
-//     return;
-//   }
-
-//   const nextElement = (currentElement === activeElement.nextElementSibling) ?
-// 		currentElement.nextElementSibling :
-// 		currentElement;
-
-// 	tasksListElement.insertBefore(activeElement, nextElement);
-// });
-
-
-// Drag and drop 3 - вариант с мячом
-// const zone1 = document.querySelector('.card-wrapper__oval');
-// const slide = document.querySelector('#swiperSlide');
-
-// zone1.ondragover = allowDrop;
-
-// function allowDrop(event) {
-//   event.preventDefault();
-// }
-
-// slide.ondragstart = drag;
-
-// function drag(event) {
-//   event.dataTransfer.setData('id', event.target.id);
-// }
-
-// zone1.ondrop = drop;
-
-// function drop(event) {
-//   let itemId = event.dataTransfer.getData('id');
-//   console.log(itemId);
-//   event.target.append(document.getElementById(itemId));
-// }
-
-// document.addEventListener("dragstart", function( event ) {
-
-//   dragged = event.target;
-
-//   event.target.style.opacity = .5;
-// }, false);
-
-// document.addEventListener("dragend", function( event ) {
-
-//   event.target.style.opacity = "";
-// }, false);
-
-
-// Drag and drop 4
-// let currentDroppable = null;
-
-// swiperSlide.onmousedown = function(event) {
-
-//   let shiftX = event.clientX - swiperSlide.getBoundingClientRect().left;
-//   let shiftY = event.clientY - swiperSlide.getBoundingClientRect().top;
-
-//   swiperSlide.style.position = 'absolute';
-//   swiperSlide.style.zIndex = 1000;
-//   document.body.append(swiperSlide);
-
-//   moveAt(event.pageX, event.pageY);
-
-//   function moveAt(pageX, pageY) {
-//     swiperSlide.style.left = pageX - shiftX + 'px';
-//     swiperSlide.style.top = pageY - shiftY + 'px';
-//   }
-
-//   function onMouseMove(event) {
-//     moveAt(event.pageX, event.pageY);
-
-//     swiperSlide.hidden = true;
-//     let elemBelow = document.elementFromPoint(event.clientX, event.clientY);
-//     swiperSlide.hidden = false;
-
-//     if (!elemBelow) return;
-
-//     let droppableBelow = elemBelow.closest('.card-wrapper__oval');
-//     if (currentDroppable != droppableBelow) {
-//       if (currentDroppable) {
-//         leaveDroppable(currentDroppable);
-//       }
-//       currentDroppable = droppableBelow;
-//       if (currentDroppable) {
-//         enterDroppable(currentDroppable);
-//       }
-//     }
-//   }
-
-//   document.addEventListener('mousemove', onMouseMove);
-
-//   swiperSlide.onmouseup = function() {
-//     document.removeEventListener('mousemove', onMouseMove);
-//     swiperSlide.onmouseup = null;
-//   };
-
-// };
-
-// function enterDroppable(elem) {
-//   elem.style.background = 'pink';
-// }
-
-// function leaveDroppable(elem) {
-//   elem.style.background = '';
-// }
-
-// swiperSlide.ondragstart = function() {
-//   return false;
-// };
