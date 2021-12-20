@@ -297,9 +297,13 @@ sizeBtns.addEventListener('click', (e) => {
   const trgt = e.target;
   const sizes = Array.from(sizeBtns.querySelectorAll('.sidebar-tab__size'));
   if (trgt == sizes[0]) {
+    sizes[0].style.backgroundColor = '#ffe1c0'
+    sizes[1].style.backgroundColor = '#ffffff'
     canvasScale = 10;
   } // пользователь выбрал формат А1
   if (trgt == sizes[1]) {
+    sizes[1].style.backgroundColor = '#ffe1c0'
+    sizes[0].style.backgroundColor = '#ffffff'
     canvasScale = 7;
   } // пользователь выбрал формат А2
 });
