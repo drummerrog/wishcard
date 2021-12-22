@@ -29,8 +29,8 @@ body {
   font-style: normal;
   font-size: 215px;
   line-height: 0.6;
-  margin: 18px 0 148px 30px;
   -webkit-margin: 18px 0 148px 30px;
+  margin: 18px 0 148px 30px;
 }
 
 .info-description {
@@ -125,10 +125,6 @@ body {
   background: #fff;
 }
 
-.swiper-slide-duplicate {
-  margin-right: 0 !important;
-}
-
 /* Слайдер */
 .swiper {
   width: 100%;
@@ -147,6 +143,10 @@ body {
   height: auto !important;
   object-fit: cover;
   border-right: 1px solid #000;
+  margin-right: 0 !important;
+}
+
+.swiper-slide-duplicate {
   margin-right: 0 !important;
 }
 
@@ -275,6 +275,7 @@ body {
 
 .sidebar-tabs__content.active {
   display: flex;
+  z-index: -1;
 }
 
 #ovalSmall {
@@ -370,6 +371,7 @@ body {
   background-color: rgb(255, 255, 255);
   box-shadow: 4px 4.785px 6.04px 0.96px rgba(143, 143, 143, 0.56);
   border: 1px solid #000;
+  z-index: 1;
 }
 
 /* Кнопка "скачать" */
