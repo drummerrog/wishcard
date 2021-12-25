@@ -9024,7 +9024,7 @@
   }
 
   .swiper-slide {
-    width: 144.9px !important;
+    width: 144.45px !important;
   }
 
   .swiper-button {
@@ -11834,30 +11834,22 @@
   }
 
   #qb18 {
-    width: 137px;
-    height: 84px;
-    grid-row: 4/6;
-    grid-column: 3;
-    margin-top: 35px;
-    margin-left: -14px;
-  }
-
-  #qb19 {
-    font-family: "GillSansLightC", sans-serif;
-    font-weight: 300;
-    font-style: normal;
     font-size: 11px;
-    position: relative;
-    display: grid;
-    align-items: center;
-    text-align: center;
-    text-transform: uppercase;
     width: 188px;
     height: 187px;
     grid-row: 4/7;
     grid-column: 4;
     margin-top: 35px;
     margin-left: 0;
+  }
+
+  #qb19 {
+    width: 137px;
+    height: 84px;
+    grid-row: 4/6;
+    grid-column: 3;
+    margin-top: 35px;
+    margin-left: -14px;
   }
 
   #qb20 {
