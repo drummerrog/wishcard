@@ -90,7 +90,7 @@ document.getElementById("imgInp").addEventListener('change', function () {
   readURL(this);
 });
 
-// Удаление слайда
+// Удаление слайда из слайдера
 document.querySelector('.Swiper').addEventListener('click', (e) => {
   const target = e.target;
   if (target.classList.contains('swiper-slide')) {
@@ -271,6 +271,17 @@ window.addEventListener('load', () => {
       }
     });
   });
+});
+
+// Удаление слайда из ячеек карты
+document.querySelector('.card').addEventListener('click', (e) => {
+  const target = e.target;
+  if (target.classList.contains('swiper-slide')) {
+    const children = target.parentNode.children;
+    for (let i = 0; i < children.length; i++) {
+      if (target === children[i]) swiper2.removeSlide(i);
+    }
+  }
 });
 
 // Сохранение изображения в компьютер
