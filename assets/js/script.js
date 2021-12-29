@@ -274,15 +274,13 @@ window.addEventListener('load', () => {
 });
 
 // Удаление слайда из ячеек карты
-document.querySelector('.card').addEventListener('click', (e) => {
-  const target = e.target;
-  if (target.classList.contains('swiper-slide')) {
-    const children = target.parentNode.children;
-    for (let i = 0; i < children.length; i++) {
-      if (target === children[i]) swiper2.removeSlide(i);
-    }
-  }
-});
+document.querySelectorAll('.card-wrapper__oval') // получаем все овалы на странице
+.forEach(oval => { // пробегаемся по ним в цикле
+    oval.addEventListener('click', () => { // на каждый овал вешаем слушатель клика
+        // удаляем весь HTML внутри овала, соответсвенно, все элементы внутри. Это можно сделать и по-другому, если этот способ не подойдет
+        oval.innerHTML = '';
+    })
+})
 
 // Сохранение изображения в компьютер
 // БЛОК №1 ВЫТАСКИВАЕМ  ЦВЕТ  ДЛЯ  ПЛАШКИ
