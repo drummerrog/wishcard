@@ -160,6 +160,9 @@
     width: 393px;
     height: 56px;
     font-size: 18px;
+    transform: rotate(-90deg);
+    position: absolute;
+    text-transform: uppercase;
   }
 
   .sidebar-tabs__content.active {
@@ -3157,6 +3160,9 @@
     width: 393px;
     height: 56px;
     font-size: 18px;
+    transform: rotate(-90deg);
+    position: absolute;
+    text-transform: uppercase;
   }
 
   #ovalSmall {
@@ -6147,6 +6153,9 @@
     width: 383px;
     height: 53px;
     font-size: 18px;
+    transform: rotate(-90deg);
+    position: absolute;
+    text-transform: uppercase;
   }
 
   #ovalSmall {
@@ -9212,6 +9221,9 @@
     width: 330px;
     height: 45px;
     font-size: 15px;
+    transform: rotate(-90deg);
+    position: absolute;
+    text-transform: uppercase;
   }
 
   .button {
@@ -12315,6 +12327,9 @@
     width: 311px;
     height: 44px;
     font-size: 14px;
+    transform: rotate(-90deg);
+    position: absolute;
+    text-transform: uppercase;
   }
 
   .button {
@@ -15398,6 +15413,9 @@
     width: 290px;
     height: 44px;
     font-size: 14px;
+    transform: rotate(-90deg);
+    position: absolute;
+    text-transform: uppercase;
   }
 
   .button {
@@ -18479,6 +18497,9 @@
     width: 232px;
     height: 34px;
     font-size: 11px;
+    transform: rotate(-90deg);
+    position: absolute;
+    text-transform: uppercase;
   }
 
   .button {
