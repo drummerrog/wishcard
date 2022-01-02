@@ -371,17 +371,25 @@ body {
 
 /* Кнопка "скачать" */
 .download {
-  width: 60px;
-  height: 435px;
+  width: 435px;
+  height: 60px;
   background-color: rgb(255, 255, 255);
   box-shadow: 4px 4.785px 6.04px 0.96px rgba(143, 143, 143, 0.56);
   border: 1px solid #000;
   cursor: pointer;
+  font-size: 20px;
+  transform: rotate(-90deg);
+  position: absolute;
+  text-transform: uppercase;
 }
 
-.button {
-  font-size: 36px;
-}
+/* .button {
+  font-size: 20px;
+  transform: rotate(-90deg);
+  position: absolute;
+  text-transform: uppercase;
+  right: -26px;
+} */
 
 /* Карта */
 .card {

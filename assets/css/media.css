@@ -157,8 +157,9 @@
   }
 
   .download {
-    width: 56px;
-    height: 393px;
+    width: 393px;
+    height: 56px;
+    font-size: 18px;
   }
 
   .sidebar-tabs__content.active {
@@ -3153,8 +3154,9 @@
   }
 
   .download {
-    width: 56px;
-    height: 393px;
+    width: 393px;
+    height: 56px;
+    font-size: 18px;
   }
 
   #ovalSmall {
@@ -6142,8 +6144,9 @@
   }
 
   .download {
-    width: 53px;
-    height: 383px;
+    width: 383px;
+    height: 53px;
+    font-size: 18px;
   }
 
   #ovalSmall {
@@ -9206,8 +9209,9 @@
   }
 
   .download {
-    width: 45px;
-    height: 330px;
+    width: 330px;
+    height: 45px;
+    font-size: 15px;
   }
 
   .button {
@@ -12308,8 +12312,9 @@
   }
 
   .download {
-    width: 44px;
-    height: 311px;
+    width: 311px;
+    height: 44px;
+    font-size: 14px;
   }
 
   .button {
@@ -15390,8 +15395,9 @@
   }
 
   .download {
-    width: 44px;
-    height: 290px;
+    width: 290px;
+    height: 44px;
+    font-size: 14px;
   }
 
   .button {
@@ -18470,8 +18476,9 @@
   }
 
   .download {
-    width: 34px;
-    height: 232px;
+    width: 232px;
+    height: 34px;
+    font-size: 11px;
   }
 
   .button {
