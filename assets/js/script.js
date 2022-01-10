@@ -275,23 +275,30 @@ window.addEventListener('load', () => {
 
 // Удаление слайда из ячеек карты
 document.querySelectorAll('.card-wrapper__oval') // получаем все овалы на странице
-.forEach(oval => { // пробегаемся по ним в цикле
+  .forEach(oval => { // пробегаемся по ним в цикле
     oval.addEventListener('click', () => { // на каждый овал вешаем слушатель клика
-        // удаляем весь HTML внутри овала, соответсвенно, все элементы внутри. Это можно сделать и по-другому, если этот способ не подойдет
-        oval.innerHTML = '';
+      // удаляем весь HTML внутри овала, соответсвенно, все элементы внутри. Это можно сделать и по-другому, если этот способ не подойдет
+      oval.innerHTML = '';
     })
-})
+  })
+
+document.querySelectorAll('.card-wrapper__quadrate')
+  .forEach(oval => {
+    oval.addEventListener('click', () => {
+      oval.innerHTML = '';
+    })
+  })
 
 // Сохранение изображения в компьютер
 // БЛОК №1 ВЫТАСКИВАЕМ  ЦВЕТ  ДЛЯ  ПЛАШКИ
 let elToDownloadBgColor = 'rgb(255, 255, 255)';
 let blockColors;
 const colorTitle = Array.from(document.querySelectorAll('span')) // находим все элементы span
-colorTitle.forEach((itm,indx)=>{
+colorTitle.forEach((itm, indx) => {
   // находим элемент "Цвет" и запоминаем в blockColors соседний блок, содержащий экземпляры цветов
-  itm.textContent==='Цвет'? blockColors = colorTitle[indx]['nextElementSibling']:null; 
+  itm.textContent === 'Цвет' ? blockColors = colorTitle[indx]['nextElementSibling'] : null;
 })
-blockColors.addEventListener('click',(e)=>{// вешаем обработчик событий на blockColors
+blockColors.addEventListener('click', (e) => {// вешаем обработчик событий на blockColors
   const trgt = e.target;
   // вытаскиваем цвет для плашки
   elToDownloadBgColor = window.getComputedStyle(trgt)['backgroundColor']
