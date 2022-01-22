@@ -38,15 +38,10 @@ const swiper1 = new Swiper(".Swiper", {
   spaceBetween: 1,
   slidesPerGroup: 1,
   initialSlide: 0,
-  // freeMode: true,
   allowTouchMove: false,
   mousewheel: {
     invert: true,
   },
-  // keyboard: {
-  //   enabled: true,
-  //   onlyInViewport: true,
-  // },
   breakpoints: {
     320: {
       slidesPerView: 1
@@ -110,10 +105,6 @@ const swiper2 = new Swiper(".mySwiper", {
   loop: true,
   loopedSlides: 0,
   allowTouchMove: false,
-  // keyboard: {
-  //   enabled: true,
-  //   onlyInViewport: true,
-  // },
   mousewheel: {
     invert: true,
   },
@@ -338,7 +329,7 @@ $('button').on('click', () => {
     const link = $('<a></a>');
     link.attr({
       href: canvas.toDataURL('image/jpeg'),
-      download: 'wishcard.jpg',
+      download: 'dreamboard.jpg',
     });
     body.append(link);
     link[0].click();

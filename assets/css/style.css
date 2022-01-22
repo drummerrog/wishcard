@@ -28,7 +28,7 @@ body {
   font-style: normal;
   font-size: 215px;
   line-height: 0.6;
-  -webkit-margin: 18px 0 148px 30px;
+  -webkit-margin: 100px 0 148px 30px;
   margin: 18px 0 148px 30px;
 }
 
@@ -270,7 +270,6 @@ body {
 
 .sidebar-tabs__content.active {
   display: flex;
-  /* z-index: -1; */
 }
 
 #ovalSmall {
@@ -383,18 +382,9 @@ body {
   text-transform: uppercase;
 }
 
-/* .button {
-  font-size: 20px;
-  transform: rotate(-90deg);
-  position: absolute;
-  text-transform: uppercase;
-  right: -26px;
-} */
-
 /* Карта */
 .card {
   width: 1415px;
-  /* width: 100%; */
   height: 100%;
   display: flex;
   flex-wrap: wrap;
@@ -402,27 +392,22 @@ body {
 }
 
 .color-white {
-  /* width: 1440px; */
   background-color: #fff;
 }
 
 .color-yellow {
-  /* width: 1440px; */
   background-color: rgb(248, 245, 159) !important;
 }
 
 .color-blue {
-  /* width: 1440px; */
   background-color: rgb(170, 220, 248) !important;
 }
 
 .color-pink {
-  /* width: 1440px; */
   background-color: rgb(246, 190, 210) !important;
 }
 
 .color-purple {
-  /* width: 1440px; */
   background-color: rgb(185, 185, 239) !important;
 }
 
@@ -1179,19 +1164,6 @@ body {
   margin-top: -17px;
   margin-left: -4px;
 }
-
-/* #ct5 {
-  font-family: "GillSansLightC", sans-serif;
-  font-weight: 300;
-  font-style: normal;
-  font-size: 14px;
-  position: absolute;
-  display: grid;
-  text-transform: uppercase;
-  text-align: center;
-  top: 85px;
-  left: -8px;
-} */
 
 #cw6 {
   width: 474px;
@@ -2045,19 +2017,6 @@ body {
   margin-top: -37px;
   margin-left: 69px;
 }
-
-/* #ct10 {
-  font-family: "GillSansLightC", sans-serif;
-  font-weight: 300;
-  font-style: normal;
-  font-size: 14px;
-  position: absolute;
-  display: grid;
-  text-transform: uppercase;
-  text-align: center;
-  top: 100px;
-  left: 55px;
-} */
 
 .card-wrapper__quadrate {
   background-color: #a7a7a7;
