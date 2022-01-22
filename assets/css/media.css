@@ -15258,7 +15258,7 @@
   }
 
   .swiper-slide {
-    width: 136.95px !important;
+    width: 137px !important;
   }
 
   .swiper-button {
@@ -24477,6 +24477,10 @@
     margin: 30px 0 80px;
   }
 
+  .swiper-slide {
+    width: 193.36px !important;
+  }
+
   /* .tabs {
     width: 100%;
     display: block;
@@ -24520,9 +24524,6 @@
     border-right: 1px solid #000 !important;
   } */
 
-  /* .swiper-slide {
-    width: 224px !important;
-  } */
 
   /* .swiper-button {
     display: none;
@@ -25121,6 +25122,10 @@
     margin: auto;
     margin-left: 50px;
     margin-right: 50px;
+  }
+
+  .swiper-slide {
+    width: 193.36px !important;
   }
 
   /* .info-title {
