@@ -3309,6 +3309,7 @@ body {
 .pos2 {
   position: unset;
   transform: none !important;
+  object-fit: cover;
 }
 
 .card-wrapper-text {
