@@ -11364,6 +11364,7 @@
   }
 
   #ct16 {
+    width: 84%;
     grid-row: 3;
     grid-column: 2/5;
     margin-top: -15px;
@@ -11523,7 +11524,7 @@
 
   #ct18 {
     grid-row: 2;
-    grid-column: 2/4;
+    grid-column: 2/5;
     margin-top: 13px;
     margin-left: 10px;
   }
@@ -14277,6 +14278,7 @@
   }
 
   #ct14 {
+    width: 80%;
     grid-row: 3;
     grid-column: 2/5;
     margin-top: -8px;
@@ -14471,6 +14473,7 @@
   }
 
   #ct16 {
+    width: 85%;
     grid-row: 3;
     grid-column: 2/5;
     margin-top: -15px;
@@ -14706,7 +14709,7 @@
 
   #ct19 {
     grid-row: 2;
-    grid-column: 2;
+    grid-column: 2/4;
     margin-top: 23px;
     margin-left: -39px;
   }
@@ -17356,6 +17359,7 @@
   }
 
   #ct14 {
+    width: 85%;
     grid-row: 3;
     grid-column: 2/5;
     margin-top: -10px;
@@ -17542,6 +17546,7 @@
   }
 
   #ct16 {
+    width: 85%;
     grid-row: 3;
     grid-column: 2/5;
     margin-top: -15px;
@@ -17620,8 +17625,7 @@
   }
 
   #ct17 {
-    width: 337px;
-    height: 80px;
+    width: 85%;
     grid-row: 2;
     grid-column: 1/5;
     margin-top: -4px;
@@ -17700,6 +17704,7 @@
   }
 
   #ct18 {
+    width: 90%;
     grid-row: 2;
     grid-column: 2/5;
     margin-top: 13px;
@@ -17777,9 +17782,10 @@
   }
 
   #ct19 {
-    grid-row: 3;
-    grid-column: 2;
-    margin-top: -45px;
+    width: 80%;
+    grid-row: 2;
+    grid-column: 2/5;
+    margin-top: 20px;
     margin-left: 9px;
   }
 
@@ -20421,6 +20427,7 @@
   }
 
   #ct14 {
+    width: 85%;
     grid-row: 3;
     grid-column: 2/5;
     margin-top: -10px;
@@ -20607,6 +20614,7 @@
   }
 
   #ct16 {
+    width: 85%;
     grid-row: 3;
     grid-column: 2/5;
     margin-top: -18px;
@@ -20685,8 +20693,7 @@
   }
 
   #ct17 {
-    width: 337px;
-    height: 80px;
+    width: 85%;
     grid-row: 2;
     grid-column: 1/5;
     margin-top: -5px;
@@ -20765,6 +20772,7 @@
   }
 
   #ct18 {
+    width: 90%;
     grid-row: 2;
     grid-column: 2/5;
     margin-top: 13px;
@@ -20842,9 +20850,10 @@
   }
 
   #ct19 {
-    grid-row: 3;
-    grid-column: 2;
-    margin-top: -42px;
+    width: 85%;
+    grid-row: 2;
+    grid-column: 2/5;
+    margin-top: 15px;
     margin-left: 10px;
   }
 
@@ -23660,6 +23669,7 @@
   }
 
   #ct16 {
+    width: 85%;
     grid-row: 3;
     grid-column: 2/5;
     margin-top: -18px;
@@ -23738,8 +23748,7 @@
   }
 
   #ct17 {
-    width: 337px;
-    height: 80px;
+    width: 85%;
     grid-row: 2;
     grid-column: 1/5;
     margin-top: 1px;
@@ -23818,6 +23827,7 @@
   }
 
   #ct18 {
+    width: 90%;
     grid-row: 2;
     grid-column: 2/5;
     margin-top: 19px;
@@ -23895,9 +23905,10 @@
   }
 
   #ct19 {
-    grid-row: 3;
-    grid-column: 2;
-    margin-top: -27px;
+    width: 85%;
+    grid-row: 2;
+    grid-column: 2/5;
+    margin-top: 20px;
     margin-left: 6px;
   }
 
