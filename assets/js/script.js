@@ -87,7 +87,7 @@ const swiper2 = new Swiper(".mySwiper", {
   slidesPerView: 9,
   spaceBetween: 1,
   slidesPerGroup: 1,
-  initialSlide: null,
+  initialSlide: 0,
   loop: true,
   loopedSlides: 0,
   allowTouchMove: false,
@@ -301,7 +301,7 @@ sizeBtns.addEventListener('click', (e) => {
   } // пользователь выбрал формат А2
 });
 
-// БЛОК №3  СОХРАНЕНИЕ  ПЛАШКИ  НА  КОМП
+// БЛОК №3  СОХРАНЕНИЕ  КАРТЫ  НА  КОМП
 let btnDownload = document.querySelector('.download');
 
 $('button').on('click', () => {
